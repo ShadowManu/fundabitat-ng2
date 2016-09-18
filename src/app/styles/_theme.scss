@@ -2,10 +2,15 @@
 // support for theming
 
 $fd-primary: #e58a2e;
+$fd-primary-light: #f2973d;
 $fd-accent: #d32f2f;
 
-@mixin background-primary { background-color: $fd-primary; }
-@mixin background-accent { background-color: $fd-accent; }
+@mixin background-primary { background-color: $fd-primary; color: white; }
+@mixin background-primary-light { background-color: $fd-primary-light; color: white; }
+
+@mixin background-accent { background-color: $fd-accent; color: white; }
+
+///////
 
 .md-accent[md-raised-button] { @include background-accent; }
 

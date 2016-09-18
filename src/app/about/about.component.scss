@@ -1,0 +1,10 @@
+@import '../styles/theme';
+
+md-sidenav-layout {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+md-toolbar {
+  @include background-primary-light;
+}

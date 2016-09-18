@@ -7,17 +7,21 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { MdButtonModule } from '@angular2-material/button';
+import { MdSidenavModule } from '@angular2-material/sidenav';
+import { MdToolbarModule } from '@angular2-material/toolbar';
 
 import { appRoutingModule } from './app.routing';
 import { CoreModule } from './core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +30,8 @@ import { HomeComponent } from './home';
     RouterModule,
 
     MdButtonModule,
+    MdSidenavModule,
+    MdToolbarModule,
 
     appRoutingModule,
     CoreModule
