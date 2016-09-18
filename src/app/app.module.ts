@@ -14,6 +14,7 @@ import { HomeComponent } from './home';
 
 @NgModule({
   declarations: [
+    AppComponent,
     HomeComponent
   ],
   imports: [
