@@ -1,0 +1,16 @@
+doctype
+.container(fl-layout="column", fl-layout-fill)
+  a.header(fl-layout="column", fl-layout-align="start center", routerLink="/")
+    img(src="assets/images/logo-fundabitat.png")
+
+  .links(fl-flex, fl-layout="column", md-colors="{background: 'grey-900'}")
+    .link-group(fl-layout="column", *ngFor="let l of links")
+
+      a(md-button, [routerLink]="l.link", routerLinkActive='md-accent',
+      [routerLinkActiveOptions]="{ exact: true }") {{ l.name }}
+
+      a(md-button, *ngFor="let c of l.childs", fl-layout="row", fl-layout-align="start center",
+      [routerLink]="c.link", routerLinkActive='md-accent', [routerLinkActiveOptions]="{ exact: true }")
+        div(fl-layout="row", fl-layout-align="start center")
+          md-icon chevron_right
+          | {{ c.name }}

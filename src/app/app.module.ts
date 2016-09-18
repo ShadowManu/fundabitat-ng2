@@ -16,12 +16,14 @@ import { appRoutingModule } from './app.routing';
 import { CoreModule } from './core';
 
 import { AppComponent } from './app.component';
+import { SidenavComponent } from './sidenav';
 import { HomeComponent } from './home';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './about';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SidenavComponent,
     HomeComponent,
     AboutComponent
   ],
