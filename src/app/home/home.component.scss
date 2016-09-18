@@ -1,0 +1,43 @@
+:host { color: white; }
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  padding: 5% 10% 30px 10%;
+  // TODO CENTRALIZE / FIX
+  background-color: orange;
+}
+
+img { max-width: 100%; }
+
+a {
+  color: white;
+  text-align: center;
+}
+
+p.description {
+  margin-top: 30px;
+  max-width: 700px;
+  font-size: 14pt;
+  text-align: center;
+}
+
+// TODO REPLACE NG2 COMPONENT
+.md-divider {
+  width: 100%;
+  margin-top: 35px;
+  color: rgba(0,0,0,0.5);
+  height: 1px;
+}
+
+.note { font-style: italic; }
+
+.extra {
+  width: 100%;
+  a {
+    margin: 40px 10%;
+
+    img { width: 300px; }
+    span { margin-top: 10px; }
+  }
+}
