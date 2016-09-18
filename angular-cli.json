@@ -22,6 +22,7 @@
         "../node_modules/flexlay/dist/flexlay.css",
         "styles.scss"
       ],
+      "test": "test.ts",
       "tsconfig": "tsconfig.json"
     }
   ],
@@ -30,6 +31,11 @@
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
+    }
+  },
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
     }
   },
   "defaults": {
