@@ -8,4 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['about.component.scss']
 })
 export class AboutComponent {
+
+  // TODO MOVE to Sidenav Component
+  // TODO FIX real links
+  links: any = [
+    {
+      name: 'Quienes Somos', link: "/",
+      childs: [
+        { name: 'Nuestro equipo', link: "/" },
+        { name: 'Relaciones', link: "/" },
+      ]
+    },
+    { name: 'Áreas Temáticas', link: "/" },
+    { name: 'Programas', link: "/" },
+    { name: 'Publicaciones', link: "/" }
+  ];
 }
