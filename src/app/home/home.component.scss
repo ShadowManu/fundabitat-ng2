@@ -1,11 +1,12 @@
+@import '../styles/theme';
+
 :host { color: white; }
 
 .container {
   width: 100%;
   min-height: 100%;
   padding: 5% 10% 30px 10%;
-  // TODO CENTRALIZE / FIX
-  background-color: orange;
+  @include background-primary;
 }
 
 img { max-width: 100%; }
@@ -35,7 +36,7 @@ p.description {
 .extra {
   width: 100%;
   a {
-    margin: 40px 10%;
+    margin: 40px 10px;
 
     img { width: 300px; }
     span { margin-top: 10px; }

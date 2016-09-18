@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { MdButtonModule } from '@angular2-material/button';
+
 import { appRoutingModule } from './app.routing';
 import { CoreModule } from './core';
 
@@ -22,6 +24,8 @@ import { HomeComponent } from './home';
     FormsModule,
     HttpModule,
     RouterModule,
+
+    MdButtonModule,
 
     appRoutingModule,
     CoreModule
