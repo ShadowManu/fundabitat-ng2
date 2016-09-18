@@ -1,0 +1,39 @@
+{
+  "project": {
+    "version": "1.0.0-beta.14",
+    "name": "fundabitat-ng2"
+  },
+  "apps": [
+    {
+      "assets": "assets",
+      "environments": {
+        "source": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts",
+        "dev": "environments/environment.dev.ts"
+      },
+      "index": "index.html",
+      "main": "main.ts",
+      "mobile": false,
+      "outDir": "dist",
+      "prefix": "app",
+      "root": "src",
+      "scripts": [],
+      "styles": [
+        "../node_modules/flexlay/dist/flexlay.css",
+        "styles.scss"
+      ],
+      "tsconfig": "tsconfig.json"
+    }
+  ],
+  "addons": [],
+  "packages": [],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "scss",
+    "prefixInterfaces": false
+  }
+}
