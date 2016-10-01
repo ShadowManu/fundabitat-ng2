@@ -2,5 +2,7 @@ doctype html
 md-sidenav-layout
   md-sidenav(mode="side", opened)
     fd-sidenav
-  .lens
-    router-outlet
+  div.all(fl-layout="column" , fl-layout-align="start stretch")
+    fd-header
+    .lens(fl-flex)
+      router-outlet
