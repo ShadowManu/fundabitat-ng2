@@ -7,6 +7,7 @@
   // TODO FLEXLAY MIXINS
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 h1 {
