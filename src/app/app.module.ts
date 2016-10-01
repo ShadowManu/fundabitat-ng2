@@ -13,7 +13,7 @@ import { CoreModule } from './core';
 import { AppComponent } from './app.component';
 import { ShellComponent } from './shell';
 import { SidenavComponent } from './sidenav';
-import { HeaderComponent } from './header';
+import { HeaderComponent, HeaderService } from './header';
 
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
@@ -27,6 +27,9 @@ import { AboutComponent } from './about';
 
     HomeComponent,
     AboutComponent
+  ],
+  providers: [
+    HeaderService
   ],
   imports: [
     BrowserModule,
