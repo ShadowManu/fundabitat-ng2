@@ -1,0 +1,15 @@
+@import '../styles/theme';
+
+:host {
+  height: 60px;
+  @include background-primary-light;
+
+  // TODO FLEXLAY MIXINS
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin: 0 0 0 20px;
+  font-size: 20px;
+}

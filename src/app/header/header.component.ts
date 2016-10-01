@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['header.component.scss']
 })
 export class HeaderComponent {
+  title: string = 'Hola Bale soy un Titulo de Fundabitat';
 }
