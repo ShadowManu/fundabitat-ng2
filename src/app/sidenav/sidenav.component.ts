@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'fd-sidenav',
-  templateUrl: './sidenav.component.pug',
+  templateUrl: './sidenav.component.html',
   styleUrls: ['sidenav.component.scss']
 })
 export class SidenavComponent {

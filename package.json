@@ -1,11 +1,10 @@
 {
-  "name": "hilarity-cards",
+  "name": "fundabitat",
   "version": "0.4.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "npm run pug-watch & ng serve",
-    "pug-watch": "pug src --watch",
+    "start": "pug src --watch --pretty & ng serve",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
