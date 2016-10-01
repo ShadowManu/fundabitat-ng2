@@ -11,6 +11,7 @@ import { appRoutingModule } from './app.routing';
 import { CoreModule } from './core';
 
 import { AppComponent } from './app.component';
+import { ShellComponent } from './shell';
 import { SidenavComponent } from './sidenav';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
@@ -18,6 +19,7 @@ import { AboutComponent } from './about';
 @NgModule({
   declarations: [
     AppComponent,
+    ShellComponent,
     SidenavComponent,
     HomeComponent,
     AboutComponent

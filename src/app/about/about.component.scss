@@ -1,8 +1,0 @@
-@import '../styles/theme';
-
-// Structural Styling TODO MOVE TO Wrapper Component
-md-sidenav-layout { min-height: 100%; min-width: 100%; }
-md-toolbar { @include background-primary-light; }
-
-// Sidenav Styling Move to SidenavComponent
-md-sidenav { width: 250px; }
