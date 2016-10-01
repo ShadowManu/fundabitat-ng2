@@ -1,0 +1,6 @@
+@import '../../styles/theme';
+
+:host {
+  height: 1px;
+  @include background-primary-light;
+}

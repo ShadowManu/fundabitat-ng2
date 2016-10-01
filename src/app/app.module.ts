@@ -9,6 +9,7 @@ import { MaterialModule } from '@angular/material';
 
 import { appRoutingModule } from './app.routing';
 import { CoreModule } from './core';
+import { SharedModule } from './shared';
 
 import { AppComponent } from './app.component';
 import { ShellComponent } from './shell';
@@ -37,8 +38,10 @@ import { AboutComponent } from './about';
     HttpModule,
     RouterModule,
     MaterialModule.forRoot(),
+
     appRoutingModule,
-    CoreModule
+    CoreModule,
+    SharedModule
   ],
   bootstrap: [AppComponent]
 })
