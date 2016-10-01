@@ -5,12 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
-import { MdCoreModule } from '@angular2-material/core';
-import { MdButtonModule } from '@angular2-material/button';
-import { MdSidenavModule } from '@angular2-material/sidenav';
-import { MdToolbarModule } from '@angular2-material/toolbar';
-import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
+import { MaterialModule } from '@angular/material';
 
 import { appRoutingModule } from './app.routing';
 import { CoreModule } from './core';
@@ -32,18 +27,9 @@ import { AboutComponent } from './about';
     FormsModule,
     HttpModule,
     RouterModule,
-
-    MdCoreModule,
-    MdButtonModule,
-    MdSidenavModule,
-    MdToolbarModule,
-    MdIconModule,
-
+    MaterialModule.forRoot(),
     appRoutingModule,
     CoreModule
-  ],
-  providers: [
-    MdIconRegistry
   ],
   bootstrap: [AppComponent]
 })
