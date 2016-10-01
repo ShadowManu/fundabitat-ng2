@@ -1,10 +1,13 @@
 md-sidenav-layout { height: 100%; }
 md-sidenav { width: 250px; }
 
-.all { height: 100%; }
+.all {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 .lens {
   padding: 30px;
   max-width: 850px;
-  overflow: hidden;
 }
 

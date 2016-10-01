@@ -11,13 +11,13 @@ export class SidenavComponent {
   // TODO REFACTOR in json file
   links: any = [
     {
-      name: 'Quienes Somos', link: "/",
+      name: 'Quienes Somos', link: "/nosotros",
       childs: [
         { name: 'Nuestro equipo', link: "/" },
         { name: 'Relaciones', link: "/" },
       ]
     },
-    { name: 'Áreas Temáticas', link: "/" },
+    { name: 'Áreas Temáticas', link: "/areas" },
     { name: 'Programas', link: "/" },
     { name: 'Publicaciones', link: "/" }
   ];
