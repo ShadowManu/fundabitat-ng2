@@ -7,3 +7,7 @@
   margin-top: 30px;
   @include background-primary-light;
 }
+
+:host(.space-down) {
+  margin-bottom: 20px;
+}
