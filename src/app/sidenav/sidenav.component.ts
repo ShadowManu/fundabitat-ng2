@@ -12,7 +12,7 @@ export class SidenavComponent {
       name: 'Quienes Somos', link: "/nosotros",
       childs: [
         { name: 'Nuestro equipo', link: "/nosotros/equipo" },
-        { name: 'Relaciones', link: "/" },
+        { name: 'Relaciones', link: "/nosotros/relaciones" },
       ]
     },
     { name: 'Áreas Temáticas', link: "/areas" },

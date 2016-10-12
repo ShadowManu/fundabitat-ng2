@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderService } from '../header';
 
 @Component({
   selector: 'fd-team',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./team.component.scss']
 })
 export class TeamComponent {
+
+  constructor(private headerSvc: HeaderService) { }
+
+  ngOnInit() {
+    this.headerSvc.setTitle('Equipo');
+  }
+
   members: any[] = [
     {
       name: 'Ruby De Valencia',
