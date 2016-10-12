@@ -1,0 +1,17 @@
+@import '../styles/theme';
+
+.section {
+  padding-bottom: 30px;
+
+  img {
+    max-width: 130px;
+    max-height: 170px;
+  }
+
+  span {
+    margin-top: 15px;
+    color: $fd-accent;
+    font-weight: bold;
+  }
+
+}
