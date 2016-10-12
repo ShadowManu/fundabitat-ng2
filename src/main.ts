@@ -1,5 +1,3 @@
-'use strict';
-
 import './polyfills';
 import './firebase';
 

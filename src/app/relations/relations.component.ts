@@ -1,5 +1,3 @@
-'use strict';
-
 import { Component, OnInit } from '@angular/core';
 
 import { HeaderService } from '../header/header.service';

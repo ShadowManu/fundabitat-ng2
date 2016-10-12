@@ -1,5 +1,3 @@
-'use strict';
-
 // TODO FULLFILL with firebase init
 // import * as firebase from 'firebase';
 // const config = {
