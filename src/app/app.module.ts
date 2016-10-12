@@ -19,6 +19,7 @@ import { HeaderComponent, HeaderService } from './header';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { AreasComponent } from './areas';
+import { RelationsComponent } from './relations';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AreasComponent } from './areas';
 
     HomeComponent,
     AboutComponent,
-    AreasComponent
+    AreasComponent,
+    RelationsComponent
   ],
   providers: [
     HeaderService
