@@ -11,7 +11,7 @@ export class SidenavComponent {
     {
       name: 'Quienes Somos', link: "/nosotros",
       childs: [
-        { name: 'Nuestro equipo', link: "/" },
+        { name: 'Nuestro equipo', link: "/nosotros/equipo" },
         { name: 'Relaciones', link: "/" },
       ]
     },
