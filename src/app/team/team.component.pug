@@ -1,15 +1,13 @@
 doctype html
-div.standard-page
+p.
+  FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del
+  país y del exterior.
 
-  p.
-    FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del
-    país y del exterior.
+fd-divider.space-down
 
-  fd-divider.space-down
-
-  div(fl-layout="row", fl-layout-wrap)
-    .section(*ngFor="let member of members", fl-layout="row", fl-flex-xs="100", fl-flex-sm="50", fl-flex-gt-sm="33")
-      md-card
-        img(md-card-image [src]="member.photo", [alt]="member.name")
-        md-card-title {{ member.name }}
-        md-card-subtitle {{ member.description }}
+div(fl-layout="row", fl-layout-wrap)
+  .section(*ngFor="let member of members", fl-layout="row", fl-flex-xs="100", fl-flex-sm="50", fl-flex-gt-sm="33")
+    md-card
+      img(md-card-image [src]="member.photo", [alt]="member.name")
+      md-card-title {{ member.name }}
+      md-card-subtitle {{ member.description }}
