@@ -29,7 +29,27 @@ p.
   de alcanzar una mejor salud, en coordinación con los Servicios Seccionales de Salud y demás ONGs. que adelanten
   programas en ésta área.
 
+div.section(*ngFor="let p of ads", fl-layout="column", fl-layout-align="start stretch")
+  md-card
+    md-card-content(fl-layout="row", fl-layout-align="start start")
+      .main
+        h2 {{ p.year }}
+        fd-divider
+        p {{ p.name }}
+        p: small {{ p.others }}
+      img([src]="p.image", [alt]="p.name")
+
 fd-divider
 h1 Facilitadores en Escuela Activa
 
 p Promueve, apoya y fomenta los Programas de Etnoeducación y de Capacitación no formal entre los grupos locales.
+
+div.section(*ngFor="let p of fea", fl-layout="column", fl-layout-align="start stretch")
+  md-card
+    md-card-content(fl-layout="row", fl-layout-align="start start")
+      .main
+        h2 {{ p.year }}
+        fd-divider
+        p {{ p.name }}
+        p: small {{ p.others }}
+      img([src]="p.image", [alt]="p.name")
