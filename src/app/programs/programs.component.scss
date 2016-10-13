@@ -1,8 +1,9 @@
-.img-cont {
-  width: 300px;
+.section {
+  padding-bottom: 10px;
 
   img {
-    min-height: 220px;
-    object-fit: cover;
+    width: 220px;
+    min-width: 220px;
+    padding-left: 10px;
   }
 }
