@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 
-import { appRoutingModule } from './app.routing';
+import { AppRoutingModule } from './app.routing';
 import { CoreModule } from './core';
 import { SharedModule } from './shared';
 
@@ -50,7 +50,7 @@ import { PublicationsComponent } from './publications';
     RouterModule,
     MaterialModule.forRoot(),
 
-    appRoutingModule,
+    AppRoutingModule,
     CoreModule,
     SharedModule
   ],
