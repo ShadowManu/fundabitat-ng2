@@ -36,7 +36,7 @@ import { PublicationsComponent } from './publications';
     AboutComponent,
     AreasComponent,
     ProgramsComponent,
-    PrublicationsComponent,
+    PublicationsComponent,
     RelationsComponent,
     TeamComponent
   ],

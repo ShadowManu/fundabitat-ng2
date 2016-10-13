@@ -9,6 +9,7 @@ import { TeamComponent } from './team';
 import { RelationsComponent } from './relations';
 import { AreasComponent } from './areas';
 import { ProgramsComponent } from './programs';
+import { PublicationsComponent } from './publications';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
