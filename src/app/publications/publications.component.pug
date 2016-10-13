@@ -13,7 +13,10 @@ div.standard-page
     div.card-container(*ngFor="let p of publications", fl-flex-xs="100", fl-flex-gt-xs="100",
     fl-layout="row", fl-layout-align="start stretch")
       md-card
-        h2 {{ p.title }}
-        p: small {{ p.author }}
-        img(md-card-image, [src]="area.image", [alt]="area.name")
-        span {{ area.name }}
+        div.title(fl-layout="column" fl-flex)
+          h2 {{ p.title }}
+          p: small {{ p.author }}
+          fd-divider
+        p(*ngFor="let d of p.description") {{ d }}
+        div.img-cont
+          img(md-card-image, [src]="p.image", [alt]="p.name")

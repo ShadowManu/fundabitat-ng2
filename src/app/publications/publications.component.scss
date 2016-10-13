@@ -1,0 +1,17 @@
+.title {
+  h2 { margin-bottom: 0; }
+
+  p {
+    font-style: italic;
+    margin-top: 8px;
+  }
+}
+
+.img-cont{
+  width: 300px;
+
+  img {
+    min-height: 220px;
+    object-fit: contain;
+  }
+}
