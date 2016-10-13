@@ -1,17 +1,9 @@
-.title {
-  h2 { margin-bottom: 0; }
-
-  p {
-    font-style: italic;
-    margin-top: 8px;
-  }
-}
-
-.img-cont{
-  width: 300px;
+.section {
+  padding-bottom: 10px;
 
   img {
-    min-height: 220px;
-    object-fit: contain;
+    width: 220px;
+    min-width: 220px;
+    padding-left: 10px;
   }
 }
