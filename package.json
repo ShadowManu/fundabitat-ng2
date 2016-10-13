@@ -9,8 +9,8 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "deploy": "npm run build && npm run deploy",
-    "build": "pug src && ng build --prod --env=prod",
+    "deploy": "npm run build && npm run upload",
+    "build": "pug src && ng build --prod --env=prod --aot",
     "upload": "firebase deploy"
   },
   "dependencies": {
