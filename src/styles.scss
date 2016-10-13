@@ -14,3 +14,16 @@ a, [routerLink] {
   cursor: pointer;
   text-decoration: none;
 }
+
+//// INITIAL WORKS OF ANGULAR THEMING
+@import '~@angular/material/core/theming/all-theme';
+
+@include md-core();
+
+$primary: md-palette($md-orange);
+$accent: md-palette($md-red);
+$warn: md-palette($md-purple);
+
+$theme: md-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);

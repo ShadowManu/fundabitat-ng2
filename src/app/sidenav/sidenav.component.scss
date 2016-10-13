@@ -9,12 +9,19 @@
 
 .links {
   background-color: $fd-black;
-  a {
+  [md-raised-button] {
     padding: 3px 10px 3px 20px;
     color: white;
+
     font-size: 14px;
     text-transform: uppercase;
     text-align: left;
+
+    border-radius: 0;
+
+    &:not(.md-accent) {
+      background-color: transparent;
+    }
   }
 }
 
