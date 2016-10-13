@@ -1,3 +1,5 @@
+'use strict';
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -16,7 +18,7 @@ export class SidenavComponent {
       ]
     },
     { name: 'Áreas Temáticas', link: "/areas" },
-    { name: 'Programas', link: "/" },
-    { name: 'Publicaciones', link: "/" }
+    { name: 'Programas', link: "/programas" },
+    { name: 'Publicaciones', link: "/publicaciones" }
   ];
 }

@@ -1,0 +1,35 @@
+doctype html
+p.
+  FUNDABITAT desarrolla los Proyectos, en el marco de sus Programas de Formación y Capacitación:
+
+fd-divider.space-down
+
+h1 Piloto de Construcción con Tecnologías Apropiadas y Apropiables
+
+p.
+  Está dirigido a la investigación, desarrollo y aplicación de tecnologías y sistemas constructivos con tierra,
+  dando las suficientes herramientas en todas las fases de la cadena de producción, dentro de un marco tipológico
+  regional y cultural.
+
+div.section(*ngFor="let p of pctaa", fl-layout="column", fl-layout-align="start stretch")
+  md-card
+    md-card-content(fl-layout="row", fl-layout-align="start start")
+      .main
+        h2 {{ p.year }}
+        fd-divider
+        p {{ p.name }}
+        p: small {{ p.others }}
+      img([src]="p.image", [alt]="p.name")
+
+fd-divider
+h1 Agentes de Salud
+
+p.
+  Implementa acciones destinadas a generar autosuficiencia en las comunidades, para que puedan trabajar en función
+  de alcanzar una mejor salud, en coordinación con los Servicios Seccionales de Salud y demás ONGs. que adelanten
+  programas en ésta área.
+
+fd-divider
+h1 Facilitadores en Escuela Activa
+
+p Promueve, apoya y fomenta los Programas de Etnoeducación y de Capacitación no formal entre los grupos locales.

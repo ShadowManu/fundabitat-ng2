@@ -1,3 +1,5 @@
+'use strict';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -17,8 +19,11 @@ import { HeaderComponent, HeaderService } from './header';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { AreasComponent } from './areas';
+
 import { RelationsComponent } from './relations';
 import { TeamComponent } from './team';
+import { ProgramsComponent } from './programs';
+import { PublicationsComponent } from './publications';
 
 @NgModule({
   declarations: [
@@ -30,6 +35,8 @@ import { TeamComponent } from './team';
     HomeComponent,
     AboutComponent,
     AreasComponent,
+    ProgramsComponent,
+    PublicationsComponent,
     RelationsComponent,
     TeamComponent
   ],
