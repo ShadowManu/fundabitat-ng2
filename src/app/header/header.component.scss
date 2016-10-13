@@ -1,16 +1,33 @@
 @import '../styles/theme';
 
 :host {
-  height: 60px;
   @include background-primary-light;
 
   // TODO FLEXLAY MIXINS
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   flex-shrink: 0;
 }
 
+.roller {
+  overflow: hidden;
+  display: flex;
+
+  img {
+    animation: roll 80s linear infinite normal;
+    width: 300px;
+    height: 184px;
+    object-fit: cover;
+  }
+}
+
+@keyframes roll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-800%); }
+}
+
 h1 {
-  margin: 0 0 0 20px;
-  font-size: 20px;
+  margin: 6px 0 9px 20px;
+  font-size: 30px;
 }
