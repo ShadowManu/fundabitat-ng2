@@ -1,11 +1,11 @@
-'use strict';
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
+import { RouterModule } from '@angular/router';
+
+import { AngularFireModule } from 'angularfire2';
 
 import { AppRoutingModule } from './app.routing';
 import { CoreModule } from './core';
@@ -19,11 +19,12 @@ import { HeaderComponent, HeaderService } from './header';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { AreasComponent } from './areas';
-
 import { RelationsComponent } from './relations';
 import { TeamComponent } from './team';
 import { ProgramsComponent } from './programs';
 import { PublicationsComponent } from './publications';
+
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -44,11 +45,12 @@ import { PublicationsComponent } from './publications';
     HeaderService
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule,
     MaterialModule.forRoot(),
+    RouterModule,
 
     AppRoutingModule,
     CoreModule,
