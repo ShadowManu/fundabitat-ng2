@@ -1,15 +1,9 @@
 doctype html
-p.
-  <b>FUNDABITAT</b> es una Asociación Civil, no lucrativa, con sede permanente en Venezuela, constituida el 20 de
-  junio de 1990; se registra en la Oficina Subalterna del Tercer Circuito de Registro del Distrito Sucre del Estado
-  Miranda en Baruta, el 14 de Noviembre de 1990, bajo el nº 17, Tomo 10 del Protocolo Primero.
+p {{ (data | async)?.description }}
 
 fd-divider
 h1 Misión
-p.
-  Realizar investigaciones aplicadas, de carácter multidisciplinario relativas al hábitat y su mejor apropiación,
-  que ayuden a la cooperación técnica y al progreso social de la región, en el marco del respeto a las diferentes
-  culturas y en armonía con el manejo sostenible y equitativo de los recursos del medio.
+p {{ (data | async)?.mission }}
 
 p.
   Para cumplir  con su Misión, <b>FUNDABITAT</b>, pequeña en su número de miembros, pero con una visión amplia e
