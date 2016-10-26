@@ -27,7 +27,7 @@ import { PublicationsComponent } from './publications';
           { path: 'publicaciones', component: PublicationsComponent }
         ]
       }
-    ], { useHash: true}),
+    ]),
   ],
   exports: [
     RouterModule
