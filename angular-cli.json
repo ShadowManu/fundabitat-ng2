@@ -1,15 +1,15 @@
 {
   "project": {
-    "version": "1.0.0-beta.17",
+    "version": "1.0.0-beta.21",
     "name": "fundabitat-ng2"
   },
   "apps": [
     {
-      "assets": "assets",
+      "assets": ["assets"],
       "environments": {
         "source": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts",
-        "dev": "environments/environment.dev.ts"
+        "dev": "environments/environment.dev.ts",
+        "prod": "environments/environment.prod.ts"
       },
       "index": "index.html",
       "main": "main.ts",
@@ -40,6 +40,18 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "prefixInterfaces": false
+    "prefixInterfaces": false,
+    "inline": {
+      "style": false,
+      "template": false
+    },
+    "spec": {
+      "class": false,
+      "component": true,
+      "directive": true,
+      "module": false,
+      "pipe": true,
+      "service": true
+    }
   }
 }
