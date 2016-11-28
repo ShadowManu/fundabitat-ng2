@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
+import { ActivatedRoute} from "@angular/router";
+import { FirebaseObjectObservable } from 'angularfire2';
 
 import { HeaderService } from '../header/header.service';
 
@@ -9,16 +10,16 @@ import { HeaderService } from '../header/header.service';
   styleUrls: ['about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  data: FirebaseObjectObservable<any>;
+  about: FirebaseObjectObservable<any>;
 
   constructor(
-      private headerSvc: HeaderService,
-      private fire: AngularFire
+    private headerSvc: HeaderService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
     this.headerSvc.setTitle('Quienes Somos');
-    this.data = this.fire.database.object('/about');
+    this.route.data.subscribe(({ about }) => { this.about = about; })
   }
 
 }

@@ -17,7 +17,7 @@ import { SidenavComponent } from './sidenav';
 import { HeaderComponent, HeaderService } from './header';
 
 import { HomeComponent } from './home';
-import { AboutComponent } from './about';
+import { AboutComponent, AboutResolve } from './about';
 import { AreasComponent } from './areas';
 import { RelationsComponent } from './relations';
 import { TeamComponent } from './team';
@@ -42,7 +42,9 @@ import { environment } from '../environments/environment';
     TeamComponent
   ],
   providers: [
-    HeaderService
+    HeaderService,
+
+    AboutResolve
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),

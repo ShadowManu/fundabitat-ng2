@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home';
 import { ShellComponent } from './shell';
 
-import { AboutComponent } from './about';
+import { AboutComponent, AboutResolve } from './about';
 import { TeamComponent } from './team';
 import { RelationsComponent } from './relations';
 import { AreasComponent } from './areas';
@@ -19,7 +19,7 @@ import { PublicationsComponent } from './publications';
         path: '',
         component: ShellComponent,
         children: [
-          { path: 'nosotros', component: AboutComponent },
+          { path: 'nosotros', component: AboutComponent, resolve: { about: AboutResolve } },
           { path: 'nosotros/equipo', component: TeamComponent },
           { path: 'nosotros/relaciones', component: RelationsComponent },
           { path: 'areas', component: AreasComponent },
