@@ -21,7 +21,7 @@ import { AboutComponent, AboutResolve } from './about';
 import { AreasComponent } from './areas';
 import { RelationsComponent } from './relations';
 import { TeamComponent } from './team';
-import { ProgramsComponent } from './programs';
+import { ProgramsComponent, ProgramsResolve } from './programs';
 import { PublicationsComponent } from './publications';
 
 import { environment } from '../environments/environment';
@@ -44,7 +44,8 @@ import { environment } from '../environments/environment';
   providers: [
     HeaderService,
 
-    AboutResolve
+    AboutResolve,
+    ProgramsResolve
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),

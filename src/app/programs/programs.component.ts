@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { HeaderService } from '../header/header.service';
+import { FirebaseListObservable } from "angularfire2";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'fd-programs',
@@ -8,6 +10,7 @@ import { HeaderService } from '../header/header.service';
   styleUrls: ['programs.component.scss']
 })
 export class ProgramsComponent {
+  programs: FirebaseListObservable<any>;
 
   // TODO put in database
   pctaa: any = [
@@ -159,10 +162,13 @@ export class ProgramsComponent {
     },
   ];
 
-
-  constructor(private headerSvc: HeaderService) { }
+  constructor(
+    private headerSvc: HeaderService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     this.headerSvc.setTitle('Programas y Proyectos');
+    this.route.data.subscribe(({ programs }) => { this.programs = programs; });
   }
 }
