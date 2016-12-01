@@ -1,0 +1,20 @@
+{
+  "-KXvUPohCEZADT0zUYEk" : {
+    "description" : "Esta es la descripción de la sección",
+    "programs" : {
+      "-KXvVZbs7zBTw-3IhbKL" : {
+        "description" : "Descripción de Programa 1",
+        "image" : "assets/images/programs/PCTAA/2011.png",
+        "location" : "Info Adicional 1",
+        "title" : "Título 1"
+      },
+      "-KXvVZbtGlWNGu1IjDh4" : {
+        "description" : "Descripción de Programa 2",
+        "image" : "assets/images/programs/PCTAA/2007-2010.png",
+        "location" : "Info Adicional 2",
+        "title" : "Título 2"
+      }
+    },
+    "title" : "Un título de una sección de programas de la base de datos"
+  }
+}
