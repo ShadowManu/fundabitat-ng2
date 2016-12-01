@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     this.headerSvc.setTitle('Quienes Somos');
-    this.route.data.subscribe(({ about }) => { this.about = about; })
+    this.route.data.subscribe(({ about }) => { this.about = about; });
   }
 
 }
