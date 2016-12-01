@@ -10,7 +10,7 @@ fd-divider.space-down
   .program(*ngFor="let program of section.programs", fl-layout="column", fl-layout-align="start stretch")
     md-card
       md-card-content(fl-layout="row", fl-layout-align="start start")
-        .main
+        .main(fl-flex)
           h2 {{ program.title }}
           fd-divider
           p {{ program.description }}
