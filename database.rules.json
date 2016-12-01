@@ -3,6 +3,10 @@
     "about": {
       ".read": "true",
       ".write": "false"
+    },
+    "programs": {
+      ".read": "true",
+      ".write": "false"
     }
   }
 }
