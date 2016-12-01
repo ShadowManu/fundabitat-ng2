@@ -8,7 +8,7 @@ import { AboutComponent, AboutResolve } from './about';
 import { TeamComponent } from './team';
 import { RelationsComponent } from './relations';
 import { AreasComponent } from './areas';
-import { ProgramsComponent } from './programs';
+import { ProgramsComponent, ProgramsResolve } from './programs';
 import { PublicationsComponent } from './publications';
 
 @NgModule({
@@ -23,7 +23,7 @@ import { PublicationsComponent } from './publications';
           { path: 'nosotros/equipo', component: TeamComponent },
           { path: 'nosotros/relaciones', component: RelationsComponent },
           { path: 'areas', component: AreasComponent },
-          { path: 'programas', component: ProgramsComponent },
+          { path: 'programas', component: ProgramsComponent, resolve: { programs: ProgramsResolve } },
           { path: 'publicaciones', component: PublicationsComponent }
         ]
       }

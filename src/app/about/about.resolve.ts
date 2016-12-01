@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/router';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 
-import { Observable } from "rxjs";
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class AboutResolve implements Resolve<FirebaseObjectObservable<any>> {
