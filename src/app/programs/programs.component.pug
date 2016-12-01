@@ -1,27 +1,22 @@
 doctype html
-p.
-  FUNDABITAT desarrolla los Proyectos, en el marco de sus Programas de Formación y Capacitación:
-
+p FUNDABITAT desarrolla los Proyectos, en el marco de sus Programas de Formación y Capacitación:
 
 fd-divider.space-down
 
-// TODO ADD BACK SECTION
-//h1 Piloto de Construcción con Tecnologías Apropiadas y Apropiables
-//
-//p.
-//  Está dirigido a la investigación, desarrollo y aplicación de tecnologías y sistemas constructivos con tierra,
-//  dando las suficientes herramientas en todas las fases de la cadena de producción, dentro de un marco tipológico
-//  regional y cultural.
+.section(*ngFor="let section of programs | async", fl-layout="column", fl-layout-align="start stretch")
+  h1 {{ section.title }}
+  p {{ section.description }}
 
-.program(*ngFor="let p of programs | async", fl-layout="column", fl-layout-align="start stretch")
-  md-card
-    md-card-content(fl-layout="row", fl-layout-align="start start")
-      .main
-        h2 {{ p.title }}
-        fd-divider
-        p {{ p.description }}
-        p: small {{ p.location }}
-      img([src]="p.image", [alt]="p.name")
+  .program(*ngFor="let program of section.programs", fl-layout="column", fl-layout-align="start stretch")
+    md-card
+      md-card-content(fl-layout="row", fl-layout-align="start start")
+        .main
+          h2 {{ program.title }}
+          fd-divider
+          p {{ program.description }}
+          p: small {{ program.location }}
+        img([src]="program.image", [alt]="program.title")
+
 
 //fd-divider
 //h1 Agentes de Salud
