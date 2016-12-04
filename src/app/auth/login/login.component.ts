@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+import { MdSnackBar } from '@angular/material';
+import { Router } from '@angular/router';
 import { AngularFireAuth, AuthProviders, AuthMethods, FirebaseAuthState } from 'angularfire2';
 
 @Component({
@@ -12,6 +13,7 @@ export class LoginComponent {
   password: string;
 
   constructor(
+    private router: Router,
     private auth: AngularFireAuth,
     private snack: MdSnackBar
   ) { }
@@ -21,11 +23,15 @@ export class LoginComponent {
       { email: this.email, password: this.password },
       { provider: AuthProviders.Password, method: AuthMethods.Password }
     )
-    .then((state: FirebaseAuthState) => {
-      // NO OP FOR NOW. TODO REROUTE;
+    .then(() => {
+      this.router.navigate(['/']);
+      // this.router.navigate(['/admin']);
     })
     .catch(() => {
-      this.snack.open('Autenticación Fallida. Revise sus credenciales.');
+      let ref = this.snack.open('Autenticación Fallida. Revise sus credenciales.', 'Intenta de nuevo');
+
+      // TODO USE DURATION PARAMETER INSTEAD OF REF IN MATERIAL ALPHA11
+      setTimeout(() => ref.dismiss(), 3000);
     });
   }
 }
