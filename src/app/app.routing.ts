@@ -24,7 +24,9 @@ import { PublicationsComponent } from './publications';
           { path: 'nosotros/relaciones', component: RelationsComponent },
           { path: 'areas', component: AreasComponent },
           { path: 'programas', component: ProgramsComponent, resolve: { programs: ProgramsResolve } },
-          { path: 'publicaciones', component: PublicationsComponent }
+          { path: 'publicaciones', component: PublicationsComponent },
+
+          { path: 'auth', loadChildren: 'app/auth/auth.module#AuthModule' }
         ]
       }
     ]),
