@@ -1,0 +1,10 @@
+h1 Application Login
+
+div.form(fl-layout="column", fl-layout-align="start center")
+  md-input(type="text", placeholder="Email", [(ngModel)]="email")
+  md-input(type="password", placeholder="Password", [(ngModel)]="password")
+
+  button(md-button, md-raised-button, (click)="login()", color="primary") LOGIN
+
+div Debug Data
+pre {{ auth | async | json }}

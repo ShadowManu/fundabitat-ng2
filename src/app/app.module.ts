@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { AppRoutingModule } from './app.routing';
 import { CoreModule } from './core';
@@ -25,6 +25,11 @@ import { ProgramsComponent, ProgramsResolve } from './programs';
 import { PublicationsComponent } from './publications';
 
 import { environment } from '../environments/environment';
+
+const firebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Popup
+};
 
 @NgModule({
   declarations: [
@@ -48,7 +53,7 @@ import { environment } from '../environments/environment';
     ProgramsResolve
   ],
   imports: [
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig, firebaseAuthConfig),
     BrowserModule,
     FormsModule,
     HttpModule,
