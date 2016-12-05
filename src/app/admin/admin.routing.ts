@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
 import { AdminIndexComponent } from './index/index';
+import { AdminProgramsComponent } from './programs';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { AdminIndexComponent } from './index/index';
         path: '',
         component: AdminComponent,
         children: [
-          { path: '',  component: AdminIndexComponent }
+          { path: '',  component: AdminIndexComponent },
+          { path: 'programas', component: AdminProgramsComponent }
         ]
       }
     ])

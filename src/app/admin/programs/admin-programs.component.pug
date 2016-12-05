@@ -1,0 +1,23 @@
+h1 Programas
+
+md-card(*ngFor="let program of programs | async")
+  md-card-title {{ program.title }}
+  md-card-content: p {{ program.description }}
+  md-card-subtitle {{ program.location }}
+
+md-card
+  md-card-title Nueva Sección de Programas
+  md-card-content
+    md-input([formControl]="newSection?.controls.title", placeholder="Título")
+    md-input([formControl]="newSection?.controls.description", placeholder="Descripción")
+    button(md-button, md-button-raised, (click)="onAddSection()")
+
+md-card
+  md-card-title Nuevo Programa
+  md-card-content
+    select([formControl]="newProgram?.controls.section")
+      option(*ngFor="let obj of sections | async", [value]="obj.key") {{ obj.title }}
+    md-input([formControl]="newProgram?.controls.title", placeholder="Título")
+    md-input([formControl]="newProgram?.controls.description", placeholder="Descripción")
+    md-input([formControl]="newProgram?.controls.location", placeholder="Ubicación")
+    button(md-button, md-button-raised, (click)="onAddSection()")
