@@ -5,11 +5,14 @@
 .container {
   width: 100%;
   min-height: 100%;
-  padding: 5% 10% 30px 10%;
+  padding: 30px 10% 30px 10%;
   @include background-primary;
 }
 
-img { max-width: 100%; }
+.logo {
+  width: 300px;
+  max-width: 100%;
+}
 
 a {
   color: white;
@@ -24,21 +27,26 @@ p.description {
 }
 
 // TODO REPLACE NG2 COMPONENT
-.md-divider {
+.fd-divider {
   width: 100%;
-  margin-top: 35px;
-  color: rgba(0,0,0,0.5);
   height: 1px;
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .note { font-style: italic; }
 
 .extra {
   width: 100%;
-  a {
-    margin: 40px 10px;
 
-    img { width: 300px; }
+  a {
+    margin: 20px 10px;
+
     span { margin-top: 10px; }
+    img {
+      height: 100px;
+      max-width: 100%;
+      object-fit: contain;
+    }
   }
 }

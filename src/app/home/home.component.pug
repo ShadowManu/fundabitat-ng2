@@ -1,6 +1,6 @@
 doctype html
 div.container(fl-layout="column", fl-layout-align="space-around center")
-  img(src="/assets/images/logo-fundabitat.png")
+  img.logo(src="/assets/images/logo-fundabitat.png")
 
   p.description.
     Asociación Civil, sin fines de lucro constituida para realizar investigaciones
@@ -8,11 +8,11 @@ div.container(fl-layout="column", fl-layout-align="space-around center")
 
   button(md-raised-button, color="accent", routerLink="/nosotros") CONOCE MAS SOBRE NOSOTROS
 
-  div.md-divider.md-accent
+  div.fd-divider
 
   p.note <b>FUNDABITAT</b> crea y coordina:
 
-  div.extra(fl-layout="row", fl-layout-align="space-around center")
+  div.extra(fl-layout="row", fl-layout-xs="column", fl-layout-align="space-around center")
     a(fl-flex, fl-layout="column", fl-layout-align="start center", href="http://www.anar.org.ve")
       img(src="/assets/images/logo-anar.png")
       span.link www.anar.org.ve
