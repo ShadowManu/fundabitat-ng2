@@ -6,7 +6,7 @@
     },
     "programs": {
       ".read": "true",
-      ".write": "false"
+      ".write": "auth != null"
     }
   }
 }
