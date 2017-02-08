@@ -3,7 +3,8 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/r
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 import { Observable } from 'rxjs';
-import { mapValues, values } from 'lodash';
+
+import { schemaTransform } from '../core/helpers';
 
 @Injectable()
 export class ProgramsResolve implements Resolve<FirebaseListObservable<any>> {
@@ -16,9 +17,3 @@ export class ProgramsResolve implements Resolve<FirebaseListObservable<any>> {
   }
 }
 
-function schemaTransform(sections: any) {
-  return sections.map((sect) => mapValues(sect, (value, key) => {
-    if (key === 'programs') return values(value);
-    return value;
-  }));
-}

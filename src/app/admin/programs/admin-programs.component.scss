@@ -1,0 +1,26 @@
+md-card:not(:first-child) { margin-top: 16px; }
+
+.new-section {
+  .title { min-width: 50%; }
+  .description { width: 100%; }
+
+  button {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}
+
+.new-program {
+  .title { min-width: 50%; }
+  .description { width: 100%; }
+  .location { width: 100%; }
+
+  button {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}
+
+.section {
+  background-color: lightgray;
+}
