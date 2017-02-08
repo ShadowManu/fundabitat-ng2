@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MdSnackBar } from '@angular/material';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 import { Observable } from 'rxjs';
-import { flattenDeep } from 'lodash';
+import { assign, values } from 'lodash';
 
-import { schemaTransform } from '../../core/helpers';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -14,27 +14,44 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class AdminProgramsComponent implements OnInit {
   fireObs: FirebaseListObservable<any>;
-  transform: Observable<any>;
   sections: Observable<any>;
-  programs: Observable<any>;
 
   newSection: FormGroup;
   newProgram: FormGroup;
 
-  constructor(private fire: AngularFire, private builder: FormBuilder) {}
+  constructor(
+    private fire: AngularFire,
+    private builder: FormBuilder,
+    private snackBar: MdSnackBar
+  ) {}
 
   ngOnInit() {
+    this.fireObs = this.fire.database.list('/programs');
+    this.sections = this.fireObs.map(sections =>
+      sections.map(section => assign({}, section, { programs: values(section.programs) }))
+    )
+    .do(val => console.log(val));
+
     this.newSection = this.builder.group({ title: [], description: []});
     this.newProgram = this.builder.group({ title: [], description: [], location: [], section: []});
 
-    this.fireObs = this.fire.database.list('/programs');
-    this.transform = this.fireObs.map(schemaTransform);
-    this.sections = this.transform.map((ss: any[]) => ss.map((s: any) => ({ key: s.$key, title: s.title})));
-    this.programs = this.transform.map((ss: any[]) => flattenDeep(ss.map((s: any) => s.programs)));
   }
 
   onAddSection() {
-
+    this.fireObs.push(this.newSection.value)
+    .then(() => this.snackBar.open('Sección creada exitosamente', undefined, { duration: 2000 }))
+    .catch(() => this.snackBar.open('La sección no pudo crearse', undefined, { duration: 2000 }));
+    this.newSection.reset();
   }
 
+  onAddProgram() {
+    let { section, title, description, location } = this.newProgram.value;
+
+    this.fire.database.list(`/programs/${section}/programs`)
+    .push({ title, description, location })
+    .then(() => this.snackBar.open('Programa creada exitosamente', undefined, { duration: 2000 }))
+    .catch(() => this.snackBar.open('El programa no pudo crearse', undefined, { duration: 2000 }));
+
+    this.newProgram.reset();
+  }
 }
