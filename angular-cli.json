@@ -17,7 +17,9 @@
       "outDir": "dist",
       "prefix": "app",
       "root": "src",
-      "scripts": [],
+      "scripts": [
+        "../node_modules/hammerjs/hammer.js"
+      ],
       "styles": [
         "../node_modules/flexlay/dist/flexlay.css",
         "styles.scss"
