@@ -1,11 +1,12 @@
 doctype html
 p.
-  FUNDABITAT impulsa iniciativas que promuevan la inversión en recursos humanos, identifiquen y analicen problemas,
-  e implementen soluciones, promoviendo la participación comunitaria directa.
+  FUNDABITAT impulsa iniciativas que promuevan la inversión en recursos humanos,
+   identifiquen y analicen problemas, e implementen soluciones, promoviendo la 
+   participación comunitaria directa.
 
 p.
-  incluye como parte integral de sus actividades, la producción de documentos impresos y audiovisuales relacionados
-  con sus temas de investigación.
+  incluye como parte integral de sus actividades, la producción de documentos 
+  impresos y audiovisuales relacionados con sus temas de investigación.
 
 div.section(*ngFor="let p of publications", fl-layout="column", fl-layout-align="start stretch")
   md-card
@@ -15,6 +16,9 @@ div.section(*ngFor="let p of publications", fl-layout="column", fl-layout-align=
         h2 {{ p.title }}
         p: small {{ p.author }}
         fd-divider
-
-        p(*ngFor="let d of p.description") {{ d }}
-      img([src]="p.image", [alt]="p.name")
+        
+        .cont(fl-layout="row", fl-layout-align="space-between start")
+          div
+            p(*ngFor="let d of p.description") {{ d }}
+          img([src]="p.image", [alt]="p.name", align="right")
+        
