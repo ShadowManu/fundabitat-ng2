@@ -23,7 +23,6 @@ export class RelationsComponent implements OnInit {
         { name: 'UJMV', link: 'http://ujmv.edu/', image: "/assets/images/relations/ujmv.jpg" },
         { name: 'USB', link: 'http://www.usb.ve/', image: "/assets/images/relations/usb.png" },
         { name: 'FUNDACIÓN TAMAYO', link: "http://www.fundaciontamayo.org.ve/", image: "/assets/images/relations/ft.jpg" },
-        { name: 'INGEOLAN', link: "http://www.ingeolan.com/", image: "/assets/images/relations/ingeolan.png" },
       ]
     },
     {
@@ -38,7 +37,7 @@ export class RelationsComponent implements OnInit {
       ]
     },
     {
-      title: 'Fundabitat es miembro de',
+      title: 'FUNDABITAT es miembro de',
       members: [
         { name: 'UNAMAZ', link: 'http://www.unamaz.org/site/index.php', image: "/assets/images/relations/unamaz.png" },
         { name: 'IFRAO/UNESCO', link: 'http://www.ifrao.com/ifrao/', image: "/assets/images/relations/ifrao.png" }
