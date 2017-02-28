@@ -13,6 +13,8 @@ p FUNDABITAT desarrolla los Proyectos, en el marco de sus Programas de Formació
         .main(fl-flex)
           h2 {{ program.title }}
           fd-divider
-          p {{ program.description }}
-          p: small {{ program.location }}
-        img([src]="program.image", [alt]="program.title")
+          .cont(fl-layout="row", fl-layout-align="space-between start")
+            div
+              p {{ program.description }}
+              p: small {{ program.location }}
+            img([src]="program.image", [alt]="program.title")
