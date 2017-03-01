@@ -10,8 +10,10 @@ md-card.new-section
   md-card-title Nueva Sección de Programas
   md-card-content(fl-layout="column", fl-layout-align="start start")
 
-    md-input.title([formControl]="newSection.controls.title", placeholder="Título")
-    md-input.description([formControl]="newSection.controls.description", placeholder="Descripción")
+    md-input-container.title
+      input(mdInput, [formControl]="newSection.controls.title", placeholder="Título")
+    md-input-container.description
+      textarea(mdInput, [formControl]="newSection.controls.description", placeholder="Descripción")
 
     button(md-button, md-raised-button, color="primary", (click)="onAddSection()") Crear Sección
 
@@ -23,9 +25,12 @@ md-card.new-program
     md-select([formControl]="newProgram.controls.section", placeholder="Sección")
       md-option(*ngFor="let section of sections | async", [value]="section.$key") {{ section.title }}
 
-    md-input.title([formControl]="newProgram.controls.title", placeholder="Título")
-    md-input.description([formControl]="newProgram.controls.description", placeholder="Descripción")
-    md-input.location([formControl]="newProgram.controls.location", placeholder="Ubicación")
+    md-input-container.title
+      input(mdInput, [formControl]="newProgram.controls.title", placeholder="Título")
+    md-input-container.description
+      textarea(mdInput, [formControl]="newProgram.controls.description", placeholder="Descripción")
+    md-input-container.location
+      textarea(mdInput, [formControl]="newProgram.controls.location", placeholder="Ubicación")
 
     button(md-button, md-raised-button, color="primary", (click)="onAddProgram()") Crear Programa
 
