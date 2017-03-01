@@ -6,7 +6,7 @@
         "description" : "Creación y puesta en marcha del SISTEMA RETAM – Página web + Base de Datos sobre Tecnologías Apropiadas y Apropiables de la Amazonia, en: Construcción, Saneamiento Básico Ambiental y Energías Alternas.",
         "image" : "assets/images/programs/PCTAA/2011.png",
         "location" : "Bolivia, Brasil, Colombia , Ecuador, Guyana, Perú, Suriname y Venezuela. OEA, FFPG, CAF, UNAMAZ",
-        "title" : 2011
+        "title" : "2011"
       },
       "-KXvVZbtGlWNGu1IjDh4" : {
         "description" : "2ª Etapa. Base de Datos sobre Tecnologías Apropiadas y Apropiables de la Amazonia de en: Construcción, Saneamiento Básico Ambiental y Energías Alternas.",
@@ -82,7 +82,7 @@
     "programs" : {
       "-KXvVZbv6KQ80BPfxUng" : {
         "description" : "Creación y puesta en marcha del SISTEMA ANAR.",
-        "image" : "",
+        "image" : "/assets/images/programs/FEA/desde-2011.jpg",
         "location" : "Aplicaciones de:",
         "title" : "Desde 2011"
       },
@@ -94,7 +94,7 @@
       },
       "-KXvVZbv6KQ80BPfxUni" : {
         "description" : "• Base de Datos Geoespacial sobre las Manifestaciones Rupestres venezolanas.",
-        "image" : "assets/images/programs/FEA/desde-2011-bd.png",
+        "image" : "/assets/images/programs/FEA/desde-2011-bd.jpg",
         "location" : "INGEOLAN, Ingeniería de Computación USB",
         "title" : ""
       },
@@ -118,7 +118,7 @@
       },
       "-KXvVZbv6KQ80BPfxUnm" : {
         "description" : "Primer Congreso Continental de Escritores Indígenas en Lenguas indígenas de América.",
-        "image" : "assets/images/programs/FEA/1997.png",
+        "image" : "assets/images/programs/FEA/1997.jpg",
         "location" : "UNESCO, F.C.I.L - Fondo Canadiense para Iniciativas Locales-, Embajada de Canadá, Venezuela; ORPIA Organización Regional de Pueblos Indígenas del Amazonas-, SADA-AMAZONAS / M.A.R.N.R.",
         "title" : "1997"
       },
@@ -130,7 +130,7 @@
       },
       "-KXvVZbv6KQ80BPfxUno" : {
         "description" : "Creación y actualización continua del ANAR –Archivo Nacional de Arte Rupestre.",
-        "image" : "assets/images/programs/FEA/desde-1985.png",
+        "image" : "assets/images/programs/FEA/desde-1985.jpg",
         "location" : "",
         "title" : "Desde 1985"
       }
