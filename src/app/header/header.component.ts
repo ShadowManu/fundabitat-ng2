@@ -17,7 +17,7 @@ export class HeaderComponent {
     })
 
     // TODO ADD Missing (7th and 9th) image since its jpg
-    let simples: string[] = Array(8).fill(0).map((e, i) => `/assets/images/header/${i+1}.png`);
+    let simples: string[] = Array(8).fill(0).map((e, i) => `/assets/images/header/${i+1}.jpg`);
     this.images = simples.concat(simples);
   }
 
