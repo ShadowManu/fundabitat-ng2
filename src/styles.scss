@@ -7,6 +7,10 @@ html, body {
   height: 100%;
 }
 
+p, h1, h2, h3, span {
+  font-family: 'Century Gothic' !important;
+}
+
 @mixin core-font { font-family: 'Century Gothic', 'Roboto', sans-serif !important; }
 body, md-toolbar { @include core-font; }
 
