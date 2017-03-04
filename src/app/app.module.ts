@@ -17,7 +17,7 @@ import { SidenavComponent } from './sidenav';
 import { HeaderComponent, HeaderService } from './header';
 
 import { HomeComponent } from './home';
-import { AboutComponent, AboutResolve } from './about';
+import { AboutComponent } from './about';
 import { AreasComponent } from './areas';
 import { RelationsComponent } from './relations';
 import { TeamComponent } from './team';
@@ -49,7 +49,6 @@ const firebaseAuthConfig = {
   providers: [
     HeaderService,
 
-    AboutResolve,
     ProgramsResolve
   ],
   imports: [
