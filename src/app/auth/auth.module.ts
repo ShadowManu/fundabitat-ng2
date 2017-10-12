@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 import { AuthRoutingModule } from './auth.routing';
 
@@ -13,7 +16,11 @@ import { LoginComponent } from './login/login.component';
   imports: [
     CommonModule,
     FormsModule,
-    MaterialModule,
+
+    // Material
+    MatButtonModule,
+    MatInputModule,
+    MatSnackBarModule,
 
     AuthRoutingModule
   ]

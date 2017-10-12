@@ -1,5 +1,13 @@
 :host {
-  // TODO FLEXLAY MIXIN
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+form {
+  width: 400px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -7,7 +15,3 @@
 }
 
 md-input { width: 300px; }
-
-.form { width: 400px; }
-
-[md-button] { margin-top: 30px; }
