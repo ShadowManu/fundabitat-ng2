@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+import { MatRippleModule } from '@angular/material/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AngularFireModule } from 'angularfire2';
@@ -63,6 +64,7 @@ import { environment } from '../environments/environment';
     // Material
     MatButtonModule,
     MatIconModule,
+    MatRippleModule,
     MatSidenavModule,
 
     // Firebase
