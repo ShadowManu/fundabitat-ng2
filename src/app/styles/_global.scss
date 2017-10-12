@@ -1,10 +1,14 @@
-@import './variables';
 @import './mixins';
 
 // Global Styles
 
 html, body {
   margin: 0;
+}
+
+html { height: 100%; }
+
+body {
   height: 100%;
   @include core-font();
 }
@@ -16,16 +20,5 @@ p, h1, h2, h3, span {
 // Section-based styles
 
 a { text-decoration: none; }
-
-.standard-content {
-  h1 { color: $fd-primary-light }
-
-  h2 { color: $fd-primary-light }
-
-  p, li {
-    font-size: 17px;
-    line-height: 1.8em;
-  }
-}
 
 .md-accent[md-raised-button] { @include bg-accent(); }
