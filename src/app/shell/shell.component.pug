@@ -1,8 +1,9 @@
 doctype html
-md-sidenav-container
-  md-sidenav(mode="side", opened)
+mat-sidenav-container
+  mat-sidenav(mode="side", opened)
     fd-sidenav
-  div.all(fl-layout="column" , fl-layout-align="start stretch")
+
+  .main
     fd-header
-    .lens.standard-content(fl-flex)
+    .content
       router-outlet
