@@ -1,11 +1,11 @@
-@import '../../styles/theme';
+@import '~app/styles/mixins';
 
 :host {
   display: block;
   width: 100%;
   height: 1px;
   margin-top: 30px;
-  @include background-primary-light;
+  @include bg-light;
 }
 
 :host(.space-down) {
