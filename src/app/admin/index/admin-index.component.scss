@@ -1,2 +1,4 @@
-// TODO USE THEME COLORS
-md-card { background-color: orange; }
+@import '~app/styles/mixins';
+
+mat-card { @include bg-light; }
+mat-card-subtitle { @include bg-light; }

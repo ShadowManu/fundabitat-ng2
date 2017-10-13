@@ -1,26 +1,43 @@
-md-card:not(:first-child) { margin-top: 16px; }
-
-.new-section {
-  .title { min-width: 50%; }
-  .description { width: 100%; }
-
-  button {
-    margin-top: 10px;
-    align-self: flex-end;
-  }
+mat-card:not(:first-of-type) {
+  margin-top: 16px;
 }
 
-.new-program {
-  .title { min-width: 50%; }
-  .description { width: 100%; }
-  .location { width: 100%; }
-
-  button {
-    margin-top: 10px;
-    align-self: flex-end;
-  }
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.section {
-  background-color: lightgray;
+mat-form-field {
+  width: 400px;
 }
+
+button {
+  margin-top: 16px;
+  align-self: center;
+}
+// md-card:not(:first-child) { margin-top: 16px; }
+
+// .new-section {
+//   .title { min-width: 50%; }
+//   .description { width: 100%; }
+
+//   button {
+//     margin-top: 10px;
+//     align-self: flex-end;
+//   }
+// }
+
+// .new-program {
+//   .title { min-width: 50%; }
+//   .description { width: 100%; }
+//   .location { width: 100%; }
+
+//   button {
+//     margin-top: 10px;
+//     align-self: flex-end;
+//   }
+// }
+
+// .section {
+//   background-color: lightgray;
+// }
