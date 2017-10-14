@@ -1,20 +1,33 @@
 doctype html
 p FUNDABITAT desarrolla los Proyectos, en el marco de sus Programas de Formación y Capacitación:
 
-.section(*ngFor="let section of programs | async", fl-layout="column", fl-layout-align="start stretch")
+.section(*ngFor="let section of sections$ | async")
   fd-divider.space-down
 
   h1 {{ section.title }}
   p {{ section.description }}
 
-  .program(*ngFor="let program of section.programs", fl-layout="column", fl-layout-align="start stretch")
-    md-card
-      md-card-content(fl-layout="row", fl-layout-align="start start")
-        .main(fl-flex)
-          h2 {{ program.title }}
-          fd-divider
-          .cont(fl-layout="row", fl-layout-align="space-between start")
-            div
-              p {{ program.description }}
-              p: small {{ program.location }}
-            img([src]="program.image", [alt]="program.title")
+  md-card(*ngFor="let program of section.programs")
+    h2 {{ program.title }}
+    p {{ program.description}}
+    p {{ program.location }}
+
+    img([src]="program.image", [alt]="program.title")
+
+//- .section(*ngFor="let section of programs | async", fl-layout="column", fl-layout-align="start stretch")
+//-   fd-divider.space-down
+
+//-   h1 {{ section.title }}
+//-   p {{ section.description }}
+
+//-   .program(*ngFor="let program of section.programs", fl-layout="column", fl-layout-align="start stretch")
+//-     md-card
+//-       md-card-content(fl-layout="row", fl-layout-align="start start")
+//-         .main(fl-flex)
+//-           h2 {{ program.title }}
+//-           fd-divider
+//-           .cont(fl-layout="row", fl-layout-align="space-between start")
+//-             div
+//-               p {{ program.description }}
+//-               p: small {{ program.location }}
+//-             img([src]="program.image", [alt]="program.title")
