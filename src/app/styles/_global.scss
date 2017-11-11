@@ -17,7 +17,10 @@ p, h1, h2, h3, span, mat-card-title, mat-card-subtitle { @include core-font(); }
 
 p { margin: 0; }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+  color: black;
+}
 
 // Section-based styles
 

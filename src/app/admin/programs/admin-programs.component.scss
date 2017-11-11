@@ -1,3 +1,5 @@
+@import '~@angular/material/theming';
+
 // Form
 
 fd-admin-program-panel { margin-top: 16px; }
@@ -14,6 +16,11 @@ mat-card {
   align-items: center;
 
   .edit { margin-left: auto; }
+}
+
+mat-icon {
+  color: map-get($mat-orange, 500);
+  cursor: pointer;
 }
 
 .text {
