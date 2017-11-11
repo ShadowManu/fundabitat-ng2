@@ -1,3 +1,9 @@
 fd-admin-header(link="/admin/programas")
 
-fd-admin-program-panel(title="Editar Programa", action="Editar Programa", [sections]="sections$ | async", [program]="program$ | async")
+fd-admin-program-panel(
+  title="Editar Programa",
+  action="Editar Programa",
+  [sections]="sections$ | async",
+  [program]="program$ | async",
+  (fdSubmit)="onEditProgram($event)"
+)

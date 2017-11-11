@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreDocument as AFD } from 'angularfire2/firestore';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -16,6 +16,7 @@ import { normalizeDocArray, Program } from 'app/core';
 export class AdminEditProgramComponent {
   sections$ = this.firestore.collection('program-sections').snapshotChanges().map(normalizeDocArray);
   program$: Observable<Program>;
+  document: AFD<Program>;
 
   constructor(
     private firestore: AngularFirestore,
@@ -24,6 +25,13 @@ export class AdminEditProgramComponent {
   ) {
     let id =  this.route.snapshot.params.id;
 
-    this.program$ = this.firestore.doc<Program>(`programs/${id}`).valueChanges();
+    this.document = this.firestore.doc<Program>(`programs/${id}`);
+    this.program$ = this.document.valueChanges();
+  }
+
+  onEditProgram(program: Program) {
+    this.document.update(program)
+    .then(() => this.snackBar.open('Programa editado exitosamente', 'Cerrar', { duration: 4000 }))
+    .catch(() => this.snackBar.open('Error al editar el programa', 'Cerrar', { duration: 4000 }));
   }
 }
