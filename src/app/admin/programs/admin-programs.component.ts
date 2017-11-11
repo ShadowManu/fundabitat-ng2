@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AngularFirestore } from 'angularfire2/firestore';
@@ -29,9 +28,7 @@ export class AdminProgramsComponent {
     private snackBar: MatSnackBar
   ) { }
 
-  onCreateProgram(form: NgForm) {
-    let program: Program = form.value;
-
+  onCreateProgram(program: Program) {
     this.firestore.collection('programs').add(program)
     .then(() => this.snackBar.open('Programa creado exitosamente', 'Cerrar', { duration: 4000 }))
     .catch(() => this.snackBar.open('Error al crear el programa', 'Cerrar', { duration: 4000 }));

@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+button {
+  margin-top: 16px;
+  align-self: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field { width: 400px; }

@@ -7,18 +7,7 @@ doctype html
   h1 Programas
 
 // Create Program
-mat-card.form
-  mat-card-title Nuevo Programa
-  mat-card-content: form(#progForm="ngForm", (ngSubmit)="onCreateProgram(progForm)")
-
-    mat-form-field: mat-select(ngModel, name="section", [placeholder]="'Sección'", required)
-      mat-option(*ngFor="let section of sections$ | async", [value]="section.$id") {{ section.title }}
-
-    mat-form-field: input(matInput, ngModel, name="title", type="text", placeholder="Título", required)
-    mat-form-field: textarea(matInput, ngModel, name="description", rows="4", placeholder="Descripción", required)
-    mat-form-field: input(matInput, ngModel, name="location", type="text", placeholder="Ubicación", required)
-
-    button(mat-raised-button, color="accent") Crear Programa
+fd-admin-program-panel([sections]="sections$ | async", title="Nuevo Programa", action="Crear Programa", (fdSubmit)="onCreateProgram($event)")
 
 // Programs List
 h1 Programas Creados

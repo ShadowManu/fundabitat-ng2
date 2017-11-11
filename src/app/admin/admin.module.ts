@@ -12,12 +12,18 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AdminRoutingModule } from './admin.routing';
 import { AdminComponent } from './admin.component';
 import { AdminIndexComponent } from './index/index';
-import { AdminProgramsComponent } from './programs';
+import {
+  AdminProgramPanelComponent,
+  AdminProgramsComponent
+} from './programs';
 
 @NgModule({
   declarations: [
     AdminComponent,
     AdminIndexComponent,
+
+    // Programs
+    AdminProgramPanelComponent,
     AdminProgramsComponent
   ],
   imports: [
