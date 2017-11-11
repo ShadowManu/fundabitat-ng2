@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
 
@@ -14,7 +14,7 @@ import { ProgramCardComponent } from './program-card';
     ProgramCardComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     MatCardModule
   ],
   exports: [
