@@ -8,6 +8,7 @@ import { combineLatest } from 'rxjs/observable/combineLatest';
 import { groupBy } from 'lodash';
 
 import { HeaderService } from '../header';
+import { mixDocuments } from 'app/core';
 
 @Component({
   selector: 'fd-programs',
@@ -32,22 +33,3 @@ export class ProgramsComponent implements OnInit {
     );
   }
 }
-
-function mixObservables(sections$: Observable<DAC[]>, programs$: Observable<DAC[]>) {
-  combineLatest(sections$, programs$, mixDocuments)
-}
-
-function mixDocuments(sections: DAC[], programs: DAC[]) {
-  let groupedPrograms = groupBy(programs.map(normalizeDoc), idGrouper);
-
-  return sections.map(s => {
-    let doc = normalizeDoc(s);
-    return { ...doc, programs: groupedPrograms[doc.id] };
-  });
-}
-
-function normalizeDoc(doc: DAC): any {
-  return { ...doc.payload.doc.data(), $id: doc.payload.doc.id };
-}
-
-function idGrouper(doc: any): string { return doc.$id; }

@@ -4,8 +4,6 @@ import { AngularFirestore } from 'angularfire2/firestore';
 
 import { Observable } from 'rxjs';
 
-import { schemaTransform } from '../core/helpers';
-
 @Injectable()
 export class ProgramsResolve {
   constructor(private firestore: AngularFirestore) { }
