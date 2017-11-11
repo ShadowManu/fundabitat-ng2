@@ -13,12 +13,12 @@ body {
   @include core-font();
 }
 
-p, h1, h2, h3, span {
-  @include core-font();
-}
+p, h1, h2, h3, span, mat-card-title, mat-card-subtitle { @include core-font(); }
 
-// Section-based styles
+p { margin: 0; }
 
 a { text-decoration: none; }
+
+// Section-based styles
 
 .md-accent[md-raised-button] { @include bg-accent(); }

@@ -28,12 +28,12 @@ mat-sidenav { width: 250px; }
 
 // Generic styling inside content
 .content ::ng-deep {
-  & h1 { color: $fd-primary-light }
-
-  & h2 { color: $fd-primary-light }
+  & h1, & h2, & mat-card-title { color: $fd-primary-light }
 
   & p, li {
     font-size: 17px;
     line-height: 1.8em;
   }
+
+  & img { border-radius: 3px; }
 }
