@@ -16,6 +16,7 @@ import {
   AdminProgramPanelComponent,
   AdminProgramsComponent
 } from './programs';
+import { AdminHeaderComponent } from './shared';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,10 @@ import {
 
     // Programs
     AdminProgramPanelComponent,
-    AdminProgramsComponent
+    AdminProgramsComponent,
+
+    // Shared
+    AdminHeaderComponent
   ],
   imports: [
     CommonModule,
