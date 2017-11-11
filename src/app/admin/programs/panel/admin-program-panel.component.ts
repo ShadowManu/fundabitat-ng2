@@ -10,7 +10,7 @@ import { Program, Section } from 'app/core';
 })
 export class AdminProgramPanelComponent {
   @Input() sections: Section[];
-  @Input() program: Program = {} as any;
+  @Input() program: Program;
 
   @Input() title: string;
   @Input() action: string;

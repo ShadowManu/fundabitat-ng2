@@ -3,11 +3,11 @@ mat-card
   mat-card-title {{ title }}
   mat-card-content: form(#progForm="ngForm", (ngSubmit)="onSubmit(progForm)")
 
-    mat-form-field: mat-select([ngModel]="program.section", name="section", [placeholder]="'Sección'", required)
+    mat-form-field: mat-select([ngModel]="program?.section", name="section", [placeholder]="'Sección'", required)
       mat-option(*ngFor="let section of sections", [value]="section.$id") {{ section.title }}
 
-    mat-form-field: input(matInput, [ngModel]="program.title", name="title", type="text", placeholder="Título", required)
-    mat-form-field: textarea(matInput, [ngModel]="program.description", name="description", rows="4", placeholder="Descripción", required)
-    mat-form-field: input(matInput, [ngModel]="program.location", name="location", type="text", placeholder="Ubicación", required)
+    mat-form-field: input(matInput, [ngModel]="program?.title", name="title", type="text", placeholder="Título", required)
+    mat-form-field: textarea(matInput, [ngModel]="program?.description", name="description", rows="4", placeholder="Descripción", required)
+    mat-form-field: input(matInput, [ngModel]="program?.location", name="location", type="text", placeholder="Ubicación", required)
 
     button(mat-raised-button, color="accent") {{ action }}
