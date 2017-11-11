@@ -1,8 +1,17 @@
-.section {
-  padding: 10px;
-}
+@import '~app/styles/media';
 
-md-card img {
+mat-card img {
   height: 250px;
   object-fit: cover;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 24px;
+
+  @include media(">=xs", "<sm") { grid-template-columns: repeat(2, 1fr); }
+  @include media(">=sm") { grid-template-columns: repeat(3, 1fr); }
+
+  margin-top: 8px;
 }
