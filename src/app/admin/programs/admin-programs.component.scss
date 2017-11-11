@@ -1,29 +1,8 @@
-// Header
-
-.header {
-  display: flex;
-  align-items: center;
-}
-
-h1 { margin: 0 0 0 24px; }
+@import '~@angular/material/theming';
 
 // Form
 
-mat-card.form {
-  margin-top: 16px;
-
-  button {
-    margin-top: 16px;
-    align-self: center;
-  }
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-mat-form-field { width: 400px; }
+fd-admin-program-panel { margin-top: 16px; }
 
 // List
 
@@ -32,9 +11,29 @@ mat-form-field { width: 400px; }
   margin-bottom: 24px;
 }
 
-mat-card-subtitle {
+mat-card {
+  display: flex;
+  align-items: center;
+
+  .edit { margin-left: auto; }
+}
+
+mat-icon {
+  color: map-get($mat-orange, 500);
+  cursor: pointer;
+}
+
+.text {
   display: flex;
 
   .title { font-weight: bold; }
   .subtitle { margin-left: 8px; }
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .delete { margin-top: 8px; }
 }
