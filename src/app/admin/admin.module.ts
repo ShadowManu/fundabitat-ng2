@@ -13,6 +13,7 @@ import { AdminRoutingModule } from './admin.routing';
 import { AdminComponent } from './admin.component';
 import { AdminIndexComponent } from './index/index';
 import {
+  AdminEditProgramComponent,
   AdminProgramPanelComponent,
   AdminProgramsComponent
 } from './programs';
@@ -24,6 +25,7 @@ import { AdminHeaderComponent } from './shared';
     AdminIndexComponent,
 
     // Programs
+    AdminEditProgramComponent,
     AdminProgramPanelComponent,
     AdminProgramsComponent,
 
