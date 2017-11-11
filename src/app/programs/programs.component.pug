@@ -7,10 +7,4 @@ ng-container(*ngFor="let section of sections$ | async")
     h1 {{ section.title }}
     p {{ section.description }}
 
-    mat-card(*ngFor="let program of section.programs")
-      mat-card-title {{ program.title }}
-      fd-divider
-      .content
-        img([fireSrc]="program.image", [alt]="program.title")
-        p.description {{ program.description}} {{ program.description}} {{ program.description}} {{ program.description}}
-        mat-card-subtitle.location {{ program.location }}
+    fd-program-card(*ngFor="let program of section.programs", [program]="program")
