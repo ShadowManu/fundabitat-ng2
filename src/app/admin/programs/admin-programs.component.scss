@@ -22,3 +22,11 @@ mat-card {
   .title { font-weight: bold; }
   .subtitle { margin-left: 8px; }
 }
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .delete { margin-top: 8px; }
+}

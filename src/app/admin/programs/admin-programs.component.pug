@@ -19,5 +19,10 @@ ng-container(*ngFor="let section of sectionsWithPrograms$ | async")
 
       a.edit([routerLink]="['/admin/programas', program.$id]")
         mat-icon mode_edit
-      a.delete
+      a.delete((click)="onDeleteIntent(program)")
         mat-icon close
+
+ng-template(#dialogTemplate)
+  div.dialog
+    p ¿Estás seguro que quieres borrar este programa? ¡Esta acción no es reversible!
+    button.delete(mat-raised-button, color="accent", (click)="onDeleteProgram()") Borrar Programa
