@@ -1,12 +1,8 @@
+doctype html
 h1 Application Login
 
-div.form(fl-layout="column", fl-layout-align="start center")
-  md-input-container
-    input(mdInput, type="email", placeholder="Email", [(ngModel)]="email")
-  md-input-container
-    input(mdInput, type="password", placeholder="Password", [(ngModel)]="password")
+form(#f="ngForm", (ngSubmit)="onSubmit(f)")
+  mat-form-field: input(matInput, ngModel, name="email", type="email", placeholder="Email")
+  mat-form-field: input(matInput, ngModel, name="password", type="password", placeholder="Password")
 
-  button(md-button, md-raised-button, (click)="login()", color="primary") LOGIN
-
-div Debug Data
-pre {{ auth | async | json }}
+  button(mat-raised-button, color="accent") Entrar

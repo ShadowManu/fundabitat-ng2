@@ -1,4 +1,4 @@
-@import '../styles/theme';
+@import '~app/styles/variables';
 
 .section {
   padding-bottom: 30px;
@@ -13,5 +13,4 @@
     color: $fd-accent;
     font-weight: bold;
   }
-
 }

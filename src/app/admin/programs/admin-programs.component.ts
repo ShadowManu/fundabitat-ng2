@@ -1,57 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-import { MdSnackBar } from '@angular/material';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
-import { Observable } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { AngularFirestore } from 'angularfire2/firestore';
+
+import { Observable } from 'rxjs/Observable';
+import { combineLatest } from 'rxjs/observable/combineLatest';
 import { assign, values } from 'lodash';
 
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { mixDocuments, normalizeDocArray, Program } from 'app/core';
 
 @Component({
   selector: 'fd-admin-programs',
   templateUrl: './admin-programs.component.html',
   styleUrls: ['./admin-programs.component.scss']
 })
-export class AdminProgramsComponent implements OnInit {
-  fireObs: FirebaseListObservable<any>;
-  sections: Observable<any>;
+export class AdminProgramsComponent {
+  sections$ = this.firestore.collection('program-sections').snapshotChanges().map(normalizeDocArray);
 
-  newSection: FormGroup;
-  newProgram: FormGroup;
+  sectionsWithPrograms$ = combineLatest(
+    this.firestore.collection('program-sections').snapshotChanges(),
+    this.firestore.collection('programs').snapshotChanges(),
+    mixDocuments
+  );
 
   constructor(
-    private fire: AngularFire,
-    private builder: FormBuilder,
-    private snackBar: MdSnackBar
-  ) {}
+    private firestore: AngularFirestore,
+    private snackBar: MatSnackBar
+  ) { }
 
-  ngOnInit() {
-    this.fireObs = this.fire.database.list('/programs');
-    this.sections = this.fireObs.map(sections =>
-      sections.map(section => assign({}, section, { programs: values(section.programs) }))
-    )
-    .do(val => console.log(val));
+  onCreateProgram(form: NgForm) {
+    let program: Program = form.value;
 
-    this.newSection = this.builder.group({ title: [], description: []});
-    this.newProgram = this.builder.group({ title: [], description: [], location: [], section: []});
-
-  }
-
-  onAddSection() {
-    this.fireObs.push(this.newSection.value)
-    .then(() => this.snackBar.open('Sección creada exitosamente', undefined, { duration: 2000 }))
-    .catch(() => this.snackBar.open('La sección no pudo crearse', undefined, { duration: 2000 }));
-    this.newSection.reset();
-  }
-
-  onAddProgram() {
-    let { section, title, description, location } = this.newProgram.value;
-
-    this.fire.database.list(`/programs/${section}/programs`)
-    .push({ title, description, location })
-    .then(() => this.snackBar.open('Programa creada exitosamente', undefined, { duration: 2000 }))
-    .catch(() => this.snackBar.open('El programa no pudo crearse', undefined, { duration: 2000 }));
-
-    this.newProgram.reset();
+    this.firestore.collection('programs').add(program)
+    .then(() => this.snackBar.open('Programa creado exitosamente', 'Cerrar', { duration: 4000 }))
+    .catch(() => this.snackBar.open('Error al crear el programa', 'Cerrar', { duration: 4000 }));
   }
 }

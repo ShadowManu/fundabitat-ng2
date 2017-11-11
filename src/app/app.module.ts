@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
-import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRippleModule } from '@angular/material/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppRoutingModule } from './app.routing';
 import { CoreModule } from './core';
@@ -25,11 +33,6 @@ import { ProgramsComponent, ProgramsResolve } from './programs';
 import { PublicationsComponent } from './publications';
 
 import { environment } from '../environments/environment';
-
-const firebaseAuthConfig = {
-  provider: AuthProviders.Google,
-  method: AuthMethods.Popup
-};
 
 @NgModule({
   declarations: [
@@ -52,12 +55,24 @@ const firebaseAuthConfig = {
     ProgramsResolve
   ],
   imports: [
-    AngularFireModule.initializeApp(environment.firebaseConfig, firebaseAuthConfig),
+    // Angular
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
     RouterModule,
+
+    // Material
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatRippleModule,
+    MatSidenavModule,
+
+    // Firebase
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
 
     AppRoutingModule,
     CoreModule,

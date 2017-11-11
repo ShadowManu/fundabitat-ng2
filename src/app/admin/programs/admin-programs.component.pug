@@ -1,46 +1,32 @@
-button(md-button, md-raised-button, routerLink="/admin")
- md-icon chevron_left
- | Regresar
-
 doctype html
-h1 Programas
+.header
+  button(mat-raised-button, routerLink="/admin")
+    mat-icon chevron_left
+    span Regresar
 
-// New Section
-md-card.new-section
-  md-card-title Nueva Sección de Programas
-  md-card-content(fl-layout="column", fl-layout-align="start start")
+  h1 Programas
 
-    md-input-container.title
-      input(mdInput, [formControl]="newSection.controls.title", placeholder="Título")
-    md-input-container.description
-      textarea(mdInput, [formControl]="newSection.controls.description", placeholder="Descripción")
+// Create Program
+mat-card.form
+  mat-card-title Nuevo Programa
+  mat-card-content: form(#progForm="ngForm", (ngSubmit)="onCreateProgram(progForm)")
 
-    button(md-button, md-raised-button, color="primary", (click)="onAddSection()") Crear Sección
+    mat-form-field: mat-select(ngModel, name="section", [placeholder]="'Sección'", required)
+      mat-option(*ngFor="let section of sections$ | async", [value]="section.$id") {{ section.title }}
 
-// New Program
-md-card.new-program
-  md-card-title Nuevo Programa
-  md-card-content(fl-layout="column", fl-layout-align="start start")
+    mat-form-field: input(matInput, ngModel, name="title", type="text", placeholder="Título", required)
+    mat-form-field: textarea(matInput, ngModel, name="description", rows="4", placeholder="Descripción", required)
+    mat-form-field: input(matInput, ngModel, name="location", type="text", placeholder="Ubicación", required)
 
-    md-select([formControl]="newProgram.controls.section", placeholder="Sección")
-      md-option(*ngFor="let section of sections | async", [value]="section.$key") {{ section.title }}
+    button(mat-raised-button, color="accent") Crear Programa
 
-    md-input-container.title
-      input(mdInput, [formControl]="newProgram.controls.title", placeholder="Título")
-    md-input-container.description
-      textarea(mdInput, [formControl]="newProgram.controls.description", placeholder="Descripción")
-    md-input-container.location
-      textarea(mdInput, [formControl]="newProgram.controls.location", placeholder="Ubicación")
+// Programs List
+h1 Programas Creados
 
-    button(md-button, md-raised-button, color="primary", (click)="onAddProgram()") Crear Programa
-
-// Show all sections with its programs
-template(ngFor, let-section, [ngForOf]="sections | async")
-  md-card.section
-    md-card-title {{ section.title }}
-    md-card-content {{ section.description }}
-
-  md-card.program(*ngFor="let program of section.programs")
-    md-card-title {{ program.title }}
-    md-card-content: p {{ program.description }}
-    md-card-subtitle {{ program.location }}
+ng-container(*ngFor="let section of sectionsWithPrograms$ | async")
+  ng-container(*ngFor="let program of section.programs")
+    mat-card.program
+      mat-card-subtitle
+        span.title {{ section.title }}
+        span :
+        span.subtitle {{ program.title }}

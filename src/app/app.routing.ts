@@ -23,7 +23,7 @@ import { PublicationsComponent } from './publications';
           { path: 'nosotros/equipo', component: TeamComponent },
           { path: 'nosotros/relaciones', component: RelationsComponent },
           { path: 'areas', component: AreasComponent },
-          { path: 'programas', component: ProgramsComponent, resolve: { programs: ProgramsResolve } },
+          { path: 'programas', component: ProgramsComponent },
           { path: 'publicaciones', component: PublicationsComponent },
 
           { path: 'auth', loadChildren: 'app/auth/auth.module#AuthModule' },

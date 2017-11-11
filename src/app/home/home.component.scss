@@ -1,4 +1,4 @@
-@import '../styles/theme';
+@import '~app/styles/mixins';
 
 :host { color: white; }
 
@@ -6,7 +6,7 @@
   width: 100%;
   min-height: 100%;
   padding: 30px 10% 30px 10%;
-  @include background-primary;
+  @include bg-primary;
 }
 
 .logo {

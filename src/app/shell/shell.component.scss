@@ -1,13 +1,39 @@
-md-sidenav-container { height: 100%; }
-md-sidenav { width: 250px; }
+@import '~app/styles/variables';
 
-.all {
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+mat-sidenav-container { height: 100%; }
+
+mat-sidenav { width: 250px; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 }
-.lens {
+
+.content {
+  flex: 1;
+
   padding: 30px;
   max-width: 850px;
 }
 
+// Generic styling inside content
+.content ::ng-deep {
+  & h1, & h2, & mat-card-title { color: $fd-primary-light }
+
+  & p, li {
+    font-size: 17px;
+    line-height: 1.8em;
+  }
+
+  & img { border-radius: 3px; }
+}

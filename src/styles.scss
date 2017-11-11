@@ -1,33 +1,3 @@
-@import 'app/styles/fonts';
-@import 'app/styles/commons';
-
-// Global Styles
-html, body {
-  margin: 0;
-  height: 100%;
-}
-
-p, h1, h2, h3, span {
-  font-family: 'Century Gothic' !important;
-}
-
-@mixin core-font { font-family: 'Century Gothic', 'Roboto', sans-serif !important; }
-body, md-toolbar { @include core-font; }
-
-a, [routerLink] {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-//// INITIAL WORKS OF ANGULAR THEMING
-@import '~@angular/material/core/theming/all-theme';
-
-@include mat-core();
-
-$primary: mat-palette($mat-orange);
-$accent: mat-palette($mat-red);
-$warn: mat-palette($mat-purple);
-
-$theme: mat-light-theme($primary, $accent, $warn);
-
-@include angular-material-theme($theme);
+@import '~app/styles/fontfaces';
+@import '~app/styles/global';
+@import '~app/styles/material';
