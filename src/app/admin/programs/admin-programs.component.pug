@@ -1,30 +1,32 @@
 doctype html
-button(mat-raised-button, routerLink="/admin")
-  mat-icon chevron_left
-  span Regresar
+.header
+  button(mat-raised-button, routerLink="/admin")
+    mat-icon chevron_left
+    span Regresar
 
-h1 Programas
-
-// Create Section
-mat-card.section
-  mat-card-title Crear Sección de Programas
-  mat-card-content: form(#secForm="ngForm", (ngSubmit)="onCreateSection(secForm)")
-
-    mat-form-field: input(matInput, ngModel, name="title", type="text", placeholder="Título")
-    mat-form-field: input(matInput, ngModel, name="description", type="text", placeholder="Descripción")
-
-    button(mat-raised-button, color="accent") Crear Sección
+  h1 Programas
 
 // Create Program
-mat-card.program
+mat-card.form
   mat-card-title Nuevo Programa
   mat-card-content: form(#progForm="ngForm", (ngSubmit)="onCreateProgram(progForm)")
 
-    mat-select(ngModel, name="section", placeholder="Sección")
-      mat-option(*ngFor="let section of sections$ | async", [value]="section.payload.doc.id") {{ section.payload.doc.data().title }}
+    mat-form-field: mat-select(ngModel, name="section", [placeholder]="'Sección'", required)
+      mat-option(*ngFor="let section of sections$ | async", [value]="section.$id") {{ section.title }}
 
-    mat-form-field: input(matInput, ngModel, name="title", type="text", placeholder="Título")
-    mat-form-field: input(matInput, ngModel, name="description", type="text", placeholder="Descripción")
-    mat-form-field: input(matInput, ngModel, name="location", type="text", placeholder="Ubicación")
+    mat-form-field: input(matInput, ngModel, name="title", type="text", placeholder="Título", required)
+    mat-form-field: textarea(matInput, ngModel, name="description", rows="4", placeholder="Descripción", required)
+    mat-form-field: input(matInput, ngModel, name="location", type="text", placeholder="Ubicación", required)
 
     button(mat-raised-button, color="accent") Crear Programa
+
+// Programs List
+h1 Programas Creados
+
+ng-container(*ngFor="let section of sectionsWithPrograms$ | async")
+  ng-container(*ngFor="let program of section.programs")
+    mat-card.program
+      mat-card-subtitle
+        span.title {{ section.title }}
+        span :
+        span.subtitle {{ program.title }}
