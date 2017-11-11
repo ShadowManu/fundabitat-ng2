@@ -2,7 +2,21 @@
   display: block;
 }
 
-button {
+.image {
+  margin-top: 16px;
+  align-self: flex-start;
+}
+
+.image-inside {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 8px;
+  }
+}
+
+.submit {
   margin-top: 16px;
   align-self: center;
 }
