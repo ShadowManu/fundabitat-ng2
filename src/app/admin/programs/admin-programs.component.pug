@@ -12,7 +12,12 @@ h1 Programas Creados
 ng-container(*ngFor="let section of sectionsWithPrograms$ | async")
   ng-container(*ngFor="let program of section.programs")
     mat-card.program
-      mat-card-subtitle
+      .text
         span.title {{ section.title }}
         span :
         span.subtitle {{ program.title }}
+
+      a.edit([routerLink]="['/admin/programas', program.$id]")
+        mat-icon mode_edit
+      a.delete
+        mat-icon close

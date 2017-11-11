@@ -9,7 +9,14 @@ fd-admin-program-panel { margin-top: 16px; }
   margin-bottom: 24px;
 }
 
-mat-card-subtitle {
+mat-card {
+  display: flex;
+  align-items: center;
+
+  .edit { margin-left: auto; }
+}
+
+.text {
   display: flex;
 
   .title { font-weight: bold; }
