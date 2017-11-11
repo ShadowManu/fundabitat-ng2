@@ -1,11 +1,12 @@
-export interface ProgramSection {
-  title: string;
-  description: string;
-}
+type FirestoreId = string;
+type StoragePath = string;
 
 export interface Program {
-  sectionId: string;
-
+  $id: FirestoreId;
   title: string;
   description: string;
+  location: string;
+  image: StoragePath;
+
+  section: FirestoreId;
 }

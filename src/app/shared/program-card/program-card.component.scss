@@ -1,0 +1,20 @@
+:host { display: block; }
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  
+  mat-card-title { grid-area: title; }
+
+  fd-divider { margin-bottom: 24px; }
+
+  .description { text-align: justify; }
+
+  .location { text-align: justify; margin-top: 16px; }
+
+  img {
+    float: right;
+    margin-left: 24px;
+    width: 350px;
+  }
+}
