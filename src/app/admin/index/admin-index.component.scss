@@ -1,4 +1,9 @@
 @import '~app/styles/mixins';
 
-mat-card { @include bg-light; }
-mat-card-subtitle { @include bg-light; }
+mat-card {
+  @include bg-light;
+
+  mat-card-title { color: white; }
+
+  mat-card-subtitle { color: white; }
+}
