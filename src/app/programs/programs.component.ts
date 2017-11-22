@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AngularFirestore } from 'angularfire2/firestore';
-import { DocumentChangeAction as DAC } from 'angularfire2/firestore/interfaces';
-
 import { Observable } from 'rxjs/Observable';
 import { combineLatest } from 'rxjs/observable/combineLatest';
 import { groupBy } from 'lodash';
 
 import { HeaderService } from '../header';
-import { mixDocuments } from 'app/core';
+import { ProgramsService } from 'app/core';
 
 @Component({
   selector: 'fd-programs',
@@ -16,20 +13,14 @@ import { mixDocuments } from 'app/core';
   styleUrls: ['programs.component.scss']
 })
 export class ProgramsComponent implements OnInit {
-  sections$ = this.firestore.collection('program-sections').valueChanges();
+  sections$ = this.programsSvc.fetchAll();
 
   constructor(
-    private firestore: AngularFirestore,
     private headerSvc: HeaderService,
+    private programsSvc: ProgramsService
   ) { }
 
   ngOnInit() {
     this.headerSvc.setTitle('Programas y Proyectos');
-
-    this.sections$ = combineLatest(
-      this.firestore.collection('program-sections').snapshotChanges(),
-      this.firestore.collection('programs').snapshotChanges(),
-      mixDocuments
-    );
   }
 }
