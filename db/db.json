@@ -1,0 +1,161 @@
+{
+  "program-sections": {
+    "DyVc57VK7SthkcpC5Ox7": {
+      "title": "Piloto de Construcción con Tecnologías Apropiadas y Apropiables",
+      "description": "Está dirigido a la investigación, desarrollo y aplicación de tecnologías y sistemas constructivos con tierra, dando las suficientes herramientas en todas las fases de la cadena de producción, dentro de un marco tipológico regional y cultural."
+    },
+    "Ug2VKRJzpypfa8zfi5bx": {
+      "title": "Agentes de Salud",
+      "description": "Implementa acciones destinadas a generar autosuficiencia en las comunidades, para que puedan trabajar en función de alcanzar una mejor salud, en coordinación con los Servicios Seccionales de Salud y demás ONGs. que adelanten programas en ésta área."
+    },
+    "bgzXPFlFFbwfYgjk177N": {
+      "title": "Facilitadores en Escuela Activa",
+      "description": "Promueve, apoya y fomenta los Programas de Etnoeducación y de Capacitación no formal entre los grupos locales."
+    }
+  },
+  "programs": [
+    {
+      "section": "DyVc57VK7SthkcpC5Ox7",
+      "title": "2011",
+      "description": "Creación y puesta en marcha del SISTEMA RETAM – Página web + Base de Datos sobre Tecnologías Apropiadas y Apropiables de la Amazonia, en: Construcción, Saneamiento Básico Ambiental y Energías Alternas.",
+      "location": "Ecuador, Guyana, Perú y Suriname. OEA, FFPG, CAF, UNAMAZ",
+      "image": "pctaa-2011.png"
+    },
+    {
+      "section": "DyVc57VK7SthkcpC5Ox7",
+      "title": "2010",
+      "description": "2ª Etapa. Base de Datos sobre Tecnologías Apropiadas y Apropiables de la Amazonia de en: Construcción, Saneamiento Básico Ambiental y Energías Alternas.",
+      "location": "Ecuador, Guyana, Perú y Suriname. OEA, FFPG, CAF, UNAMAZ",
+      "image": "pctaa-2010.png"
+    },
+    {
+      "section": "DyVc57VK7SthkcpC5Ox7",
+      "title": "2007-2010",
+      "description": "Tecnologías Apropiadas y Apropiables de la Amazonia, en: Construcción, Saneamiento Básico Ambiental y Energías alternas. Las experiencias amazónicas para la puesta en marcha de la Red de Tecnologías Apropiadas del Amazonas RETAM (2ª etapa).",
+      "location": "Amazonia de Ecuador, Guyana, Perú y Suriname. OEA, FFPG, CAF, UNAMAZ",
+      "image": "pctaa-2007-2010.png"
+    },
+    {
+      "section": "DyVc57VK7SthkcpC5Ox7",
+      "title": "2001-2002",
+      "description": "Formación de las familias de las 7 Comunidades JIWI-Guahibo del corredor vial Samariapo- Boca del río Sipapo, en la elaboración de la línea de materiales de construcción con tierra cocida, a través de la Metodología Participativa.",
+      "location": "Estado Amazonas, Venezuela. Programa Sobremarcha-CIARA.",
+      "image": "pctaa-2001-2002.png"
+    },
+    {
+      "section": "DyVc57VK7SthkcpC5Ox7",
+      "title": "2000",
+      "description": "1ª Etapa. Base de Datos sobre Tecnologías Apropiadas y Apropiables de la Amazonia de Bolivia, Brasil, Colombia y Venezuela en: Construcción, Saneamiento Básico Ambiental y Energías Alternas.",
+      "location": "FAO , TCA / SP Venezuela",
+      "image": "pctaa-2000.png"
+    },
+    {
+      "section": "DyVc57VK7SthkcpC5Ox7",
+      "title": "1997–1999",
+      "description": "Tecnologías Apropiadas y Apropiables de la Amazonia, en: Construcción, Saneamiento Básico Ambiental y Energías alternas. Las experiencias amazónicas para la creación de la Red de Tecnologías Apropiadas del Amazonas RETAM (1ª etapa).",
+      "location": "FAO, TCA / SP Venezuela",
+      "image": "pctaa-1997-1999.png"
+    },
+    {
+      "section": "DyVc57VK7SthkcpC5Ox7",
+      "title": "1998",
+      "description": "Generación y Transferencia de Tecnologías sobre Plantas útiles del Amazonas, y Sistemas de Producción Indígena. En el marco del proyecto RLA/92/6/32 Capacitación para el Aprovechamiento Sustentable de la Biodiversidad Amazónica.",
+      "location": "PNUD, TCA / SP Perú, SADA AMAZONAS / MARNR Venezuela",
+      "image": "assets/images/programs/PCTAA/1998.png"
+    },
+    {
+      "section": "DyVc57VK7SthkcpC5Ox7",
+      "title": "1990-1995",
+      "description": "15.000 Años de Vivienda Indígena en Venezuela. Proyecto regional entre Venezuela, Colombia y Brasil.",
+      "location": "UNESCO, OEA",
+      "image": "assets/images/programs/PCTAA/1990-1995.png"
+    },
+
+
+    {
+      "section": "Ug2VKRJzpypfa8zfi5bx",
+      "title": "1997",
+      "description": "Establecimiento de un Huerto piloto de Plantas Medicinales, Alimenticias, Frutales y Árboles de crecimiento rápido con las mujeres Jiwi-Guahibo del corredor vial Sipapo-Puente Samariapo, estado Amazonas",
+      "location": "EMBAJADA DE ALEMANIA –Proyectos de pequeña envergadura.",
+      "image": "as-1997-1.png"
+    },
+    {
+      "section": "Ug2VKRJzpypfa8zfi5bx",
+      "title": "1997",
+      "description": "Cursos teórico-prácticos de Bacteriología Clínica: enterobacterium, vibriones y micobacterium por cultivos básicos (para médicos y bioanalistas de la Dirección Regional de Salud del estado Amazonas).",
+      "location": "Cooperación Técnica y Científica de la Embajada de Francia (a nivel regional andino). Caracas, Université de Toulouse, Département d´Epidemiologie. Francia. PROCED –Proyecto franco-ecuatoriano de erradicación del cólera y enfermedades diarréicas (a nivel regional andino). Quito, INH –Instituto Nacional de Higiene, Ecuador.",
+      "image": "as-1997-2.png"
+    },
+    {
+      "section": "Ug2VKRJzpypfa8zfi5bx",
+      "title": "1996",
+      "description": "Cursos intensivos de diagnóstico directo con microscopio en zonas indígenas del estado Amazonas.",
+      "location": "Cooperación Técnica y Científica de la Embajada de Francia (a nivel regional andino). Caracas, PROCED -Proyecto franco-ecuatoriano de erradicación del cólera y enfermedades diarréicas (a nivel regional andino). Quito, INH –Instituto Nacional de Higiene. Ecuador.",
+      "image": "as-1996.png"
+    },
+
+    {
+      "section": "bgzXPFlFFbwfYgjk177N",
+      "title": "Desde 2011",
+      "description": "Creación y puesta en marcha del SISTEMA ANAR.",
+      "location": "Aplicaciones de:",
+      "image": "fea-desde-2011.jpg"
+    },
+    {
+      "section": "bgzXPFlFFbwfYgjk177N",
+      "title": "Desde 2011",
+      "description": "• Realidad Aumentada sobre las Manifestaciones Rupestres venezolanas.",
+      "location": "Ingeniería de Computación USB",
+      "image": "fea-desde-2011-ra.png"
+    },
+    {
+      "section": "bgzXPFlFFbwfYgjk177N",
+      "title": "Desde 2011",
+      "description": "• Base de Datos Geoespacial sobre las Manifestaciones Rupestres venezolanas.",
+      "location": "INGEOLAN, Ingeniería de Computación USB",
+      "image": "fea-desde-2011-bd.png"
+    },
+    {
+      "section": "bgzXPFlFFbwfYgjk177N",
+      "title": "Desde 2011",
+      "description": "• Software Interactivo sobre las Manifestaciones Rupestres venezolanas.",
+      "location": "Ingeniería de Computación USB",
+      "image": "fea-desde-2011-si.jpg"
+    },
+    {
+      "section": "bgzXPFlFFbwfYgjk177N",
+      "title": "Desde 2008",
+      "description": "Proyecto Educativo: Las Manifestaciones Rupestres y la Escuela.",
+      "location": "Escuela de Antropología y Escuela de Educación UCV.",
+      "image": "fea-desde-2008.png"
+    },
+    {
+      "section": "bgzXPFlFFbwfYgjk177N",
+      "title": "1998",
+      "description": "Estudio de Diseño RECICLARTE.",
+      "location": "Talleres diversos, permanentes, en colegios, escuelas y grupos comunitarios.",
+      "image": "fea-1998.png"
+    },
+    {
+      "section": "bgzXPFlFFbwfYgjk177N",
+      "title": "1997",
+      "description": "Primer Congreso Continental de Escritores Indígenas en Lenguas indígenas de América.",
+      "location": "UNESCO, F.C.I.L - Fondo Canadiense para Iniciativas Locales-, Embajada de Canadá, Venezuela; ORPIA Organización Regional de Pueblos Indígenas del Amazonas-, SADA-AMAZONAS / M.A.R.N.R.",
+      "image": "fea-1997.png"
+    },
+    {
+      "section": "bgzXPFlFFbwfYgjk177N",
+      "title": "1994-1997",
+      "description": "Atención integral a la a población indígena Jiwi-Guahibo (Amazonia de Venezuela y Colombia).",
+      "location": "OEA",
+      "image": "fea-1994-1997.png"
+    },
+    {
+      "section": "bgzXPFlFFbwfYgjk177N",
+      "title": "Desde 1985",
+      "description": "Creación y actualización continua del ANAR –Archivo Nacional de Arte Rupestre.",
+      "location": "",
+      "image": "fea-1985.png"
+    }
+  ]
+}
