@@ -9,8 +9,8 @@ p([innerHtml]="data.mission2")
 fd-divider
 h1 {{ data.goals0 }}
 
-p {{ data.goals1 }}
-p {{ data.goals2 }}
+p(*ngIf="data.goals1") {{ data.goals1 }}
+p(*ngIf="data.goals2") {{ data.goals2 }}
 
 ul
   li(*ngFor="let goal of data.goals3") {{ goal }}
