@@ -26,7 +26,11 @@ export class AdminProgramsComponent {
   onCreateProgram(program: Program) {
     this.programsSvc.createProgram(program)
     .then(() => this.snackBar.open('Programa creado exitosamente', 'Cerrar', { duration: 4000 }))
-    .catch(() => this.snackBar.open('Error al crear el programa', 'Cerrar', { duration: 4000 }));
+    .catch((err) => {
+      this.snackBar.open('Error al crear el programa', 'Cerrar', { duration: 4000 });
+      // tslint:disable-next-line:no-console
+      console.error(err);
+    });
   }
 
   onDeleteIntent(program: Program) {
