@@ -1,41 +1,19 @@
 doctype html
-p.
- <b>FUNDABITAT</b> es una Asociación Civil, no lucrativa, con sede permanente en Venezuela, constituida el 20 de junio de 1990; se registra en la Oficina Subalterna del Tercer Circuito de Registro del Distrito Sucre del Estado Miranda en Baruta, el 14 de Noviembre de 1990, bajo el nº 17, Tomo 10 del Protocolo Primero.
+p([innerHtml]="data.main")
 
 fd-divider
-h1 Misión
-p.
-  Realizar investigaciones aplicadas, de carácter multidisciplinario relativas al hábitat y su mejor apropiación, que ayuden a la cooperación técnica y al progreso social de la región, en el marco del respeto a las diferentes culturas y en armonía con el manejo sostenible y equitativo de los recursos del medio.
-
-p.
-  Para cumplir con su Misión, <b>FUNDABITAT</b>, pequeña en su número de miembros, pero con una visión amplia e
-  integrada del desarrollo rural, entre otros trabaja en la consecución de los siguientes objetivos.
+h1 {{ data.mission0 }}
+p {{ data.mission1 }}
+p([innerHtml]="data.mission2")
 
 fd-divider
-h1 Objetivos
+h1 {{ data.goals0 }}
 
-p.
-  El OBJETO principal de la Asociación es el desarrollo  y divulgación de investigaciones multi e
-  interdisciplinarias, aplicadas, de carácter estrictamente científico, tecnológico y cultural, orientadas a la
-  preservación del hábitat humano, de las Manifestaciones Rupestres, de la diversidad cultural de los diferentes
-  colectivos; a la investigación, desarrollo y fomento de Tecnologías Apropiadas y Apropiables, para el
-  mejoramiento de la calidad de vida de los habitantes de las comunidades de escasos recursos en las que dichas
-  investigaciones tienen lugar, a través de metodologías participativas.
-
-p Para cumplir con este propósito, sus actividades abarcan:
+p {{ data.goals1 }}
+p {{ data.goals2 }}
 
 ul
-  li.
-    El desarrollo y divulgación por medio de sistemas de información para grupos populares, de
-    investigaciones-acción de carácter multidisciplinario, relativas al hábitat humano, con la finalidad de
-    contribuir al mejoramiento cualitativo del mismo.
+  li(*ngFor="let goal of data.goals3") {{ goal }}
 
-  li.
-    El apoyar iniciativas de autovalimiento con base en las comunidades, con la finalidad de mitigar la pobreza.
-
-p.
-  Para ello cuenta con un equipo multidisciplinario científico y técnico asociado, rotativo de alto nivel, en
-  convenios de colaboración con Instituciones Científicas, Técnicas, Gubernamentales y ONGs del país, y del
-  exterior. Este OBJETO y Actividades no son limitativos, pues la Asociación  puede desarrollar cualquier acción
-  y/o proyecto que directa o indirectamente conlleve a una mejor apropiación del medio ambiente, por parte del ser
-  humano.
+p {{ data.goals4 }}
+  
