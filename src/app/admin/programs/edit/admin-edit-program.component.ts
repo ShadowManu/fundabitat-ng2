@@ -32,6 +32,10 @@ export class AdminEditProgramComponent {
   onEditProgram(program: Program) {
     this.document.update(program)
     .then(() => this.snackBar.open('Programa editado exitosamente', 'Cerrar', { duration: 4000 }))
-    .catch(() => this.snackBar.open('Error al editar el programa', 'Cerrar', { duration: 4000 }));
+    .catch((err) => {
+      this.snackBar.open('Error al editar el programa', 'Cerrar', { duration: 4000 });
+      // tslint:disable-next-line:no-console
+      console.error(err);
+    });
   }
 }

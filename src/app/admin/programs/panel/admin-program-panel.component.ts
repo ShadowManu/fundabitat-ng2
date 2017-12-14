@@ -3,6 +3,8 @@ import { NgForm } from '@angular/forms';
 
 import { FirebaseApp } from 'angularfire2';
 
+import { omitBy, isNil } from 'lodash';
+
 import { Program, Section } from 'app/core';
 
 type UploadState = 'EMPTY' | 'LOADING' | 'UPLOADED' | 'FAILED';
@@ -56,7 +58,7 @@ export class AdminProgramPanelComponent {
   }
 
   onSubmit(form: NgForm) {
-    let program: Program = form.value;
+    let program: Program = omitBy(form.value, isNil);
     this.fdSubmit.next(program);
   }
 }

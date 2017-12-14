@@ -1,5 +1,6 @@
 {
   "projects": {
-    "production": "fundabitat-ng2"
+    "production": "fundabitat-ng2",
+    "default": "fundabitat-ng2"
   }
 }
