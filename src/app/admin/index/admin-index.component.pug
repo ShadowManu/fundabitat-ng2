@@ -2,3 +2,5 @@ h1 Panel de Administración
 a(routerLink="/admin/programas"): mat-card
   mat-card-title Programas
   mat-card-subtitle Agregar, editar y eliminar programas
+
+button.login(*ngIf="authState | async", mat-raised-button, color="primary", (click)="signOut()") Cerrar Sesión

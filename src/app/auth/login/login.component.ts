@@ -4,6 +4,8 @@ import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
 
+import { AuthService } from 'app/core';
+
 @Component({
   selector: 'app-login',
   templateUrl: 'login.component.html',
@@ -11,18 +13,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class LoginComponent {
   constructor(
-    private router: Router,
-    private fireAuth: AngularFireAuth,
-    private snackbar: MatSnackBar
+    private authSvc: AuthService
   ) { }
 
   onSubmit(form: NgForm) {
     let { email, password } = form.value;
-
-    this.fireAuth.auth.signInWithEmailAndPassword(email, password)
-    .then(() => {
-      this.snackbar.open('Iniciaste sesión correctamente', 'Cerrar', { duration: 4000 });
-      this.router.navigateByUrl('/admin');
-    });
+    this.authSvc.signIn(email, password);
   }
 }
