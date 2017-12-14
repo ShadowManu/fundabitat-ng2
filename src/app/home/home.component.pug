@@ -2,15 +2,13 @@ doctype html
 div.container(fl-layout="column", fl-layout-align="space-around center")
   img.logo(src="/assets/images/logo-fundabitat.png")
 
-  p.description.
-    Asociación Civil, sin fines de lucro constituida para realizar investigaciones
-    multi e interdisciplinarias, relativas al hábitat y su mejor apropiación
+  p.description {{ data.description }}
 
-  button(mat-raised-button, color="accent", routerLink="/nosotros") CONOCE MAS SOBRE NOSOTROS
+  button(mat-raised-button, color="accent", routerLink="/nosotros") {{ data.knowMore }}
 
   div.fd-divider
 
-  p.note <b>FUNDABITAT</b> crea y coordina:
+  p.note <b>FUNDABITAT</b> {{ data.duties }}:
 
   div.extra(fl-layout="row", fl-layout-xs="column", fl-layout-align="space-around center")
     a(fl-flex, fl-layout="column", fl-layout-align="start center", href="http://www.anar.org.ve")
