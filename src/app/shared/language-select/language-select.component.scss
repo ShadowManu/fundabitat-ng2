@@ -4,6 +4,8 @@
   position: fixed;
   top: 0;
   right: 10%;
+
+  z-index: 2;
 }
 
 div {
@@ -14,7 +16,7 @@ div {
   padding: 8px;
   cursor: pointer;
 
-  &:hover { background: rgba(0, 0, 0, 0.2); }
+  &:hover { background: rgba(0, 0, 0, 0.5); }
 }
 
 img { width: 30px; }
