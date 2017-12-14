@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
-import { MatSnackBarModule } from '@angular/material'
+import { MatSnackBarModule } from '@angular/material';
 
 import { AuthService } from './auth.service';
 import { ProgramsService } from './programs.service';
+
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   imports: [
@@ -10,7 +12,9 @@ import { ProgramsService } from './programs.service';
   ],
   providers: [
     AuthService,
-    ProgramsService
+    ProgramsService,
+
+    AuthGuard
   ]
 })
 export class CoreModule { }
