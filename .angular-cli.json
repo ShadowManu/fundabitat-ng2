@@ -7,7 +7,7 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": ["assets", "sw.js"],
+      "assets": ["assets", "favicon.ico"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -45,6 +45,10 @@
     }
   },
   "defaults": {
-    "styleExt": "scss"
+    "styleExt": "scss",
+    "component": {}
+  },
+  "warnings": {
+    "typescriptMismatch": false
   }
 }
