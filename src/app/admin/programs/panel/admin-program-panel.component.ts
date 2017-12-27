@@ -58,7 +58,7 @@ export class AdminProgramPanelComponent {
   }
 
   onSubmit(form: NgForm) {
-    let program: Program = omitBy(form.value, isNil);
+    let program: Program = omitBy(form.value, isNil) as Program;
     this.fdSubmit.next(program);
   }
 }
