@@ -22,7 +22,7 @@ export class LanguageService {
     this.setStorage(lang);
   }
 
-  select<T>(data: LanguageData<T>): T { return data.get(this.language); }
+  select<T>(data: LanguageData<T>): T { return data.get(this.language)!; }
 
   setStorage(lang: Language) { localStorage.setItem(LANGUAGE_STORAGE_KEY, lang); }
 
