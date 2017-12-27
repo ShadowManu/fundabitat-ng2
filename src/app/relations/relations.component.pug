@@ -1,17 +1,13 @@
 doctype html
-p.
-  FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del
-  país y del exterior.
+p {{ data.description }}
 
-div(*ngFor="let rel of relations")
+div(*ngFor="let rel of data.relations")
   fd-divider.space-down
 
-  h1 {{ rel.title }}
+  h1 {{ rel.category }}
 
-  div(fl-layout="row", fl-layout-align="space-around stretch", fl-layout-wrap)
+  .items(fl-layout="row", fl-layout-align="space-around stretch", fl-layout-wrap)
 
-    a.section(*ngFor="let mem of rel.members", [href]="mem.link",
-    fl-flex="33", fl-flex-xs="100", fl-layout="column", fl-layout-align="center center")
-      div(fl-flex, fl-layout="column", fl-layout-align="center center")
-        img([src]="mem.image")
-      span {{ mem.name }}
+    a.item(*ngFor="let item of rel.items", [href]="item.link")
+      img([src]="item.image")
+      span {{ item.name }}
