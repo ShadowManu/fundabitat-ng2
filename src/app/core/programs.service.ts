@@ -4,14 +4,19 @@ import { AngularFirestore } from 'angularfire2/firestore';
 
 import { Observable } from 'rxjs/Observable';
 import { combineLatest } from 'rxjs/observable/combineLatest';
+import { switchMap } from 'rxjs/operators';
 
 import { mixDocuments, normalizeDocArray } from './helpers';
+import { LanguageService } from './language.service';
 import { Program, Section } from './types';
 
 @Injectable()
 export class ProgramsService {
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(
+    private firestore: AngularFirestore,
+    private langSvc: LanguageService
+  ) { }
 
   fetchSections(): Observable<Section[]> {
     return this.firestore.collection('program-sections')
@@ -19,10 +24,16 @@ export class ProgramsService {
   }
 
   fetchAll(): Observable<Section[]> {
-    return combineLatest(
-      this.firestore.collection('program-sections').snapshotChanges(),
-      this.firestore.collection('programs', ref => ref.orderBy('title', 'desc')).snapshotChanges(),
-      mixDocuments
+    return this.langSvc.language$.pipe(
+      switchMap(lang => {
+        let suffix = this.langSvc.asSuffix(lang);
+
+        return combineLatest(
+          this.firestore.collection(`program-sections${suffix}`).snapshotChanges(),
+          this.firestore.collection(`programs${suffix}`, ref => ref.orderBy('title', 'desc')).snapshotChanges(),
+          mixDocuments
+        );
+      })
     );
   }
 
