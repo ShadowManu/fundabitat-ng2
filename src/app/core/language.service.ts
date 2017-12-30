@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
 export type Language = 'es' | 'en';
 
 export type LanguageData<T> = Map<Language, T>;
 
 const LANGUAGE_STORAGE_KEY = 'language';
 
-const LANGUAGE_PREFIXES = new Map<Language, string>([
+const LANGUAGE_SUFFIXES = new Map<Language, string>([
   ['es', ''],
   ['en', '-en']
 ]);
@@ -14,11 +16,13 @@ const LANGUAGE_PREFIXES = new Map<Language, string>([
 @Injectable()
 export class LanguageService {
   language = this.readFromStorage();
+  language$ = new BehaviorSubject<Language>(this.language);
 
-  get prefix() { return LANGUAGE_PREFIXES.get(this.language); }
+  asSuffix(lang: Language): string { return LANGUAGE_SUFFIXES.get(lang)!; }
 
   setLanguage(lang: Language) {
     this.language = lang;
+    this.language$.next(lang);
     this.setStorage(lang);
   }
 
