@@ -5,6 +5,7 @@ import { HomeComponent } from './home';
 import { ShellComponent } from './shell';
 
 import { AboutComponent } from './about';
+import { ContactComponent } from './contact';
 import { TeamComponent } from './team';
 import { RelationsComponent } from './relations';
 import { AreasComponent } from './areas';
@@ -20,6 +21,7 @@ import { PublicationsComponent } from './publications';
         component: ShellComponent,
         children: [
           { path: 'nosotros', component: AboutComponent },
+          { path: 'contacto', component: ContactComponent },
           { path: 'nosotros/equipo', component: TeamComponent },
           { path: 'nosotros/relaciones', component: RelationsComponent },
           { path: 'areas', component: AreasComponent },
@@ -30,7 +32,7 @@ import { PublicationsComponent } from './publications';
           { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule' }
         ]
       }
-    ]),
+    ])
   ],
   exports: [
     RouterModule

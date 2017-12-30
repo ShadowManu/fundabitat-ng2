@@ -19,7 +19,8 @@ const NAVIGATION_DATA: LanguageData<NavigationData> = new Map<Language, Navigati
     },
     { name: 'Áreas Temáticas', link: '/areas' },
     { name: 'Programas', link: '/programas' },
-    { name: 'Publicaciones', link: '/publicaciones' }
+    { name: 'Publicaciones', link: '/publicaciones' },
+    { name: 'Contacto', link: '/contacto' }
   ]],
   ['en', [
     {
@@ -31,7 +32,8 @@ const NAVIGATION_DATA: LanguageData<NavigationData> = new Map<Language, Navigati
     },
     { name: 'Thematic Areas', link: '/areas' },
     { name: 'Programs', link: '/programas' },
-    { name: 'Publications', link: '/publicaciones' }
+    { name: 'Publications', link: '/publicaciones' },
+    { name: 'Contact us', link: '/contacto' }
   ]]
 ]);
 

@@ -4,33 +4,44 @@ import { AngularFirestore } from 'angularfire2/firestore';
 
 import { Observable } from 'rxjs/Observable';
 import { combineLatest } from 'rxjs/observable/combineLatest';
+import { switchMap } from 'rxjs/operators';
 
 import { mixDocuments, normalizeDocArray } from './helpers';
+import { LanguageService } from './language.service';
 import { Program, Section } from './types';
 
 @Injectable()
 export class ProgramsService {
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(
+    private firestore: AngularFirestore,
+    private langSvc: LanguageService
+  ) { }
 
   fetchSections(): Observable<Section[]> {
-    return this.firestore.collection('program-sections')
-    .snapshotChanges().map(normalizeDocArray);
+    return this.langSvc.runWithLangSuffix(suffix =>
+      this.firestore.collection(`program-sections${suffix}`)
+      .snapshotChanges().map(normalizeDocArray)
+    );
   }
 
   fetchAll(): Observable<Section[]> {
-    return combineLatest(
-      this.firestore.collection('program-sections').snapshotChanges(),
-      this.firestore.collection('programs', ref => ref.orderBy('title', 'desc')).snapshotChanges(),
-      mixDocuments
+    return this.langSvc.runWithLangSuffix(suffix =>
+      combineLatest(
+        this.firestore.collection(`program-sections${suffix}`).snapshotChanges(),
+        this.firestore.collection(`programs${suffix}`, ref => ref.orderBy('title', 'desc')).snapshotChanges(),
+        mixDocuments
+      )
     );
   }
 
   createProgram(program: Program): Promise<any> {
-    return this.firestore.collection('programs').add(program);
+    let suffix = this.langSvc.suffix;
+    return this.firestore.collection(`programs${suffix}`).add(program);
   }
 
   deleteProgram(id: string): Promise<any> {
-    return this.firestore.doc<Program>(`programs/${id}`).delete();
+    let suffix = this.langSvc.suffix;
+    return this.firestore.doc<Program>(`programs${suffix}/${id}`).delete();
   }
 }

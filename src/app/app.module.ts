@@ -27,6 +27,7 @@ import { HeaderComponent, HeaderService } from './header';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { AreasComponent } from './areas';
+import { ContactComponent } from './contact';
 import { RelationsComponent } from './relations';
 import { TeamComponent } from './team';
 import { ProgramsComponent, ProgramsResolve } from './programs';
@@ -44,6 +45,7 @@ import { environment } from '../environments/environment';
     HomeComponent,
     AboutComponent,
     AreasComponent,
+    ContactComponent,
     ProgramsComponent,
     PublicationsComponent,
     RelationsComponent,
