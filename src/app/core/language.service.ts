@@ -42,7 +42,7 @@ export class LanguageService {
     );
   }
 
-  runWithLangSuffix<T>(projection: (lang: Language) => Observable<T>): Observable<T> {
+  runWithLangSuffix<T>(projection: (suffix: string) => Observable<T>): Observable<T> {
     return this.language$.pipe(
       map(lang => this.asSuffix(lang)),
       switchMap(projection)
