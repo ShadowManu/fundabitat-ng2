@@ -6,23 +6,23 @@ import { map, switchMap } from 'rxjs/operators';
 
 export type Language = 'es' | 'en';
 
-export type LanguageData<T> = Map<Language, T>;
+export type LanguageData<T> = { [K in Language]: T; };
 
 const LANGUAGE_STORAGE_KEY = 'language';
 
-const LANGUAGE_SUFFIXES = new Map<Language, string>([
-  ['es', ''],
-  ['en', '-en']
-]);
+const LANGUAGE_SUFFIXES: LanguageData<string> = {
+  es: '',
+  en: '-en'
+};
 
 @Injectable()
 export class LanguageService {
   language = this.readFromStorage();
   language$ = new BehaviorSubject<Language>(this.language);
 
-  get suffix(): string { return LANGUAGE_SUFFIXES.get(this.language)!; }
+  get suffix(): string { return LANGUAGE_SUFFIXES[this.language]; }
 
-  asSuffix(lang: Language): string { return LANGUAGE_SUFFIXES.get(lang)!; }
+  asSuffix(lang: Language): string { return LANGUAGE_SUFFIXES[lang]; }
 
   setLanguage(lang: Language) {
     this.language = lang;
@@ -30,7 +30,7 @@ export class LanguageService {
     this.setStorage(lang);
   }
 
-  select<T>(data: LanguageData<T>): T { return data.get(this.language)!; }
+  select<T>(data: LanguageData<T>): T { return data[this.language]; }
 
   setStorage(lang: Language) { localStorage.setItem(LANGUAGE_STORAGE_KEY, lang); }
 

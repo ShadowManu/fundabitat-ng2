@@ -8,8 +8,8 @@ type NavigationData = {
   childs?: NavigationData;
 }[];
 
-const NAVIGATION_DATA: LanguageData<NavigationData> = new Map<Language, NavigationData>([
-  ['es', [
+const NAVIGATION_DATA: LanguageData<NavigationData> = {
+  es: [
     {
       name: 'Quienes Somos', link: '/nosotros',
       childs: [
@@ -21,8 +21,8 @@ const NAVIGATION_DATA: LanguageData<NavigationData> = new Map<Language, Navigati
     { name: 'Programas', link: '/programas' },
     { name: 'Publicaciones', link: '/publicaciones' },
     { name: 'Contacto', link: '/contacto' }
-  ]],
-  ['en', [
+  ],
+  en: [
     {
       name: 'About us', link: '/nosotros',
       childs: [
@@ -34,8 +34,8 @@ const NAVIGATION_DATA: LanguageData<NavigationData> = new Map<Language, Navigati
     { name: 'Programs', link: '/programas' },
     { name: 'Publications', link: '/publicaciones' },
     { name: 'Contact us', link: '/contacto' }
-  ]]
-]);
+  ]
+};
 
 @Component({
   selector: 'fd-sidenav',

@@ -16,8 +16,8 @@ interface AboutData {
   goals4: string;
 }
 
-const ABOUT_DATA: LanguageData<AboutData> = new Map<Language, AboutData>([
-  ['es', {
+const ABOUT_DATA: LanguageData<AboutData> = {
+  es: {
     aboutUs: 'Quienes Somos',
     main: '<b>FUNDABITAT</b> es una Asociación Civil, no lucrativa, con sede permanente en Venezuela, constituida el 20 de junio de 1990; se registra en la Oficina Subalterna del Tercer Circuito de Registro del Distrito Sucre del Estado Miranda en Baruta, el 14 de Noviembre de 1990, bajo el nº 17, Tomo 10 del Protocolo Primero.',
     mission0: 'Misión',
@@ -31,8 +31,8 @@ const ABOUT_DATA: LanguageData<AboutData> = new Map<Language, AboutData>([
       'El apoyar iniciativas de autovalimiento con base en las comunidades, con la finalidad de mitigar la pobreza.'
     ],
     goals4: 'Para ello cuenta con un equipo multidisciplinario científico y técnico asociado, rotativo de alto nivel, en convenios de colaboración con Instituciones Científicas, Técnicas, Gubernamentales y ONGs del país, y del exterior. Este OBJETO y Actividades no son limitativos, pues la Asociación  puede desarrollar cualquier acción y/o proyecto que directa o indirectamente conlleve a una mejor apropiación del medio ambiente, por parte del ser humano.'
-  }],
-  ['en', {
+  },
+  en: {
     aboutUs: 'About us',
     main: '<b>Fundabitat</b> is constituted on November 14, 1990, as evidenced by the Protocolized Act in the Public Registry of Chacao, Miranda State, under No. 17, Volume 10, Protocol One.',
     mission0: 'Mission',
@@ -48,8 +48,8 @@ const ABOUT_DATA: LanguageData<AboutData> = new Map<Language, AboutData>([
       'Supporting auto-influenced initiatives with foundation in the communities, including activities generating income with the purpose of mitigating poverty.'
     ],
     goals4: 'For this, it has a scientific and technical associated multidisciplinary team, rotating at a high level, in collaboration agreements with Scientific, Technical, Governmental and NGO Institutions of the country, and abroad. This OBJECT and Activities are not limiting, because the Association can develop any action and / or project that directly or indirectly leads to a better appropriation of the environment by the human being.'
-  }]
-]);
+  }
+};
 
 @Component({
   selector: 'fd-about',

@@ -11,8 +11,8 @@ interface AreasData {
     image: string;
   }[];
 }
-const AREAS_DATA: LanguageData<AreasData> = new Map<Language, AreasData>([
-  ['es', {
+const AREAS_DATA: LanguageData<AreasData> = {
+  es: {
     title: 'Áreas Temáticas',
     description: 'FUNDABITAT realiza trabajos de investigación y asesoramiento en el ámbito regional, promoviendo el intercambio de experiencas de desarrollo alternativo en:',
     areas: [
@@ -26,8 +26,8 @@ const AREAS_DATA: LanguageData<AreasData> = new Map<Language, AreasData>([
       { name: 'Implementación de proyectos demostrativos', image: '/assets/images/areas/implementacion.png' },
       { name: 'Asistencia técnica a comunidades y organizaciones', image: '/assets/images/areas/asistencia.png' }
     ]
-  }],
-  ['en', {
+  },
+  en: {
     title: 'Thematic Areas',
     description: 'FUNDABITAT performs research work and counseling at the regional level, promoting the exchange of experiences of alternative development in:',
     areas: [
@@ -41,8 +41,8 @@ const AREAS_DATA: LanguageData<AreasData> = new Map<Language, AreasData>([
       { name: 'Implementation of demonstration projects', image: '/assets/images/areas/implementacion.png' },
       { name: 'Technical assistance to communities and organizations', image: '/assets/images/areas/asistencia.png' }
     ]
-  }]
-]);
+  }
+};
 
 @Component({
   selector: 'fd-areas',
