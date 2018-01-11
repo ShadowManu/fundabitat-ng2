@@ -9,7 +9,7 @@ import { ContactComponent } from './contact';
 import { TeamComponent } from './team';
 import { RelationsComponent } from './relations';
 import { AreasComponent } from './areas';
-import { ProgramsComponent, ProgramsResolve } from './programs';
+import { ProgramsComponent } from './programs';
 import { PublicationsComponent } from './publications';
 
 @NgModule({

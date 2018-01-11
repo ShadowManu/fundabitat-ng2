@@ -30,7 +30,7 @@ import { AreasComponent } from './areas';
 import { ContactComponent } from './contact';
 import { RelationsComponent } from './relations';
 import { TeamComponent } from './team';
-import { ProgramsComponent, ProgramsResolve } from './programs';
+import { ProgramsComponent } from './programs';
 import { PublicationsComponent } from './publications';
 
 import { environment } from '../environments/environment';
@@ -52,9 +52,7 @@ import { environment } from '../environments/environment';
     TeamComponent
   ],
   providers: [
-    HeaderService,
-
-    ProgramsResolve
+    HeaderService
   ],
   imports: [
     // Angular
