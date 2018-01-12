@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { LanguageService, Language, LanguageData } from 'app/core';
-import { HeaderService } from '../header/header.service';
 
 interface AreasData {
   title: string;
@@ -49,15 +48,8 @@ const AREAS_DATA: LanguageData<AreasData> = {
   templateUrl: 'areas.component.html',
   styleUrls: ['areas.component.scss']
 })
-export class AreasComponent implements OnInit {
-  constructor(
-    private headerSvc: HeaderService,
-    private langSvc: LanguageService
-  ) { }
-
-  ngOnInit() {
-    this.headerSvc.setTitle(this.data.title);
-  }
+export class AreasComponent {
+  constructor(private langSvc: LanguageService) { }
 
   get data() { return this.langSvc.select(AREAS_DATA); }
 }

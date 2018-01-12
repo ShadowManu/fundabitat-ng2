@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { HeaderService } from '../header/header.service';
 import { LanguageService, Language, LanguageData } from 'app/core';
 
 interface AboutData {
@@ -56,16 +55,9 @@ const ABOUT_DATA: LanguageData<AboutData> = {
   templateUrl: './about.component.html',
   styleUrls: ['about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
 
-  constructor(
-    private headerSvc: HeaderService,
-    private langSvc: LanguageService
-  ) { }
+  constructor(private langSvc: LanguageService) { }
 
   get data(): AboutData { return this.langSvc.select(ABOUT_DATA); }
-
-  ngOnInit() {
-    this.headerSvc.setTitle(this.data.aboutUs);
-  }
 }

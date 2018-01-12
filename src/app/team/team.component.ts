@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HeaderService } from '../header';
+import { Component } from '@angular/core';
 
 import { LanguageService, Language, LanguageData } from 'app/core';
 
@@ -94,16 +93,8 @@ const TEAM_DATA: LanguageData<TeamData> = {
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss']
 })
-export class TeamComponent implements OnInit {
-
-  constructor(
-    private headerSvc: HeaderService,
-    private langSvc: LanguageService
-  ) { }
-
-  ngOnInit() {
-    this.headerSvc.setTitle(this.data.team);
-  }
+export class TeamComponent {
+  constructor(private langSvc: LanguageService) { }
 
   get data(): TeamData { return this.langSvc.select(TEAM_DATA); }
 }

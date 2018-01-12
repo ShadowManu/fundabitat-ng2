@@ -1,11 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Observable } from 'rxjs/Observable';
-import { combineLatest } from 'rxjs/observable/combineLatest';
-import { groupBy } from 'lodash';
+import { Component } from '@angular/core';
 
 import { LanguageService, Language, LanguageData, ProgramsService } from 'app/core';
-import { HeaderService } from '../header';
 
 interface ProgramData {
   title: string;
@@ -28,18 +23,13 @@ const PROGRAMS_DATA: LanguageData<ProgramData> = {
   templateUrl: 'programs.component.html',
   styleUrls: ['programs.component.scss']
 })
-export class ProgramsComponent implements OnInit {
+export class ProgramsComponent {
   sections$ = this.programsSvc.fetchAll();
 
   constructor(
-    private headerSvc: HeaderService,
     private langSvc: LanguageService,
     private programsSvc: ProgramsService
   ) { }
 
   get data(): ProgramData { return this.langSvc.select(PROGRAMS_DATA); }
-
-  ngOnInit() {
-    this.headerSvc.setTitle(this.data.title);
-  }
 }

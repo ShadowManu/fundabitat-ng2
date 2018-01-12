@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { LanguageService, Language, LanguageData } from 'app/core';
-import { HeaderService } from '../header/header.service';
 
 interface Item {
   name: string;
@@ -65,17 +64,8 @@ const RELATIONS_DATA: LanguageData<RelationsData> = {
   templateUrl: './relations.component.html',
   styleUrls: ['relations.component.scss']
 })
-export class RelationsComponent implements OnInit {
-
-  constructor(
-    private headerSvc: HeaderService,
-    private langSvc: LanguageService
-  ) { }
-
-  ngOnInit() {
-    this.headerSvc.setTitle(this.data.title);
-  }
+export class RelationsComponent {
+  constructor(private langSvc: LanguageService) { }
 
   get data() { return this.langSvc.select(RELATIONS_DATA); }
-
 }

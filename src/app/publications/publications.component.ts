@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { HeaderService } from '../header/header.service';
-
 @Component({
   selector: 'fd-publications',
   templateUrl: 'publications.component.html',
@@ -16,8 +14,8 @@ export class PublicationsComponent {
       author: 'Ruby De Valencia y Jeannine Sujo',
       description: ['Su contenido permitió:',
         '•  Presentar el primer inventario documentado fotográficamente sobre '
-        + 'la totalidad de estaciones rupestres registradas a nivel nacional ' 
-        + 'hasta el momento, que conforman parte del patrimonio cultural ' 
+        + 'la totalidad de estaciones rupestres registradas a nivel nacional '
+        + 'hasta el momento, que conforman parte del patrimonio cultural '
         + 'arqueológico de Venezuela.',
         '•  Sustentar importantes conclusiones en el campo de la investigación '
         + 'antropológica referentes a Venezuela: en base al estudio e '
@@ -77,16 +75,16 @@ export class PublicationsComponent {
       image: 'assets/images/publications/tecnologias-a-y-a.png'
     },
     {
-      title:'CD - Memoria Institucional TRATADO DE COOPERACIÓN AMAZÓNICA '
+      title: 'CD - Memoria Institucional TRATADO DE COOPERACIÓN AMAZÓNICA '
       + 'Publicaciones 1990-1999',
-      author:'',
+      author: '',
       description: ['Este CD-ROM contiene las publicaciones de la Secretaría '
       + 'Pro Tempore del Tratado de Cooperación Amazónica (algunas de '
       + 'FUNDABITAT) entre 1990 y 1999, años durante los cuales la Secretaría '
       + 'ha sido ejercida por Ecuador, Perú y Venezuela. Dichas publicaciones '
       + 'están dirigidas a todos los estudiosos del hecho amazónico.',
       'TCA - Tratado de Cooperación Amazónica, 1999'],
-      image:'/assets/images/publications/tratado.png'
+      image: '/assets/images/publications/tratado.png'
     },
     {
       title: 'CD. Base de Datos sobre Tecnologías Apropiadas de la Amazonia '
@@ -161,12 +159,6 @@ export class PublicationsComponent {
         'Para público de cualquier edad.',
         'FUNDABITAT, 2012'],
       image: '/assets/images/publications/juego-didactico-memoria.jpg'
-    },
-  ]
-
-  constructor(private headerSvc: HeaderService) { }
-
-  ngOnInit() {
-    this.headerSvc.setTitle('Publicaciones');
-  }
+    }
+  ];
 }

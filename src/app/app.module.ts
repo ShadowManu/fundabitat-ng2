@@ -22,7 +22,7 @@ import { SharedModule } from './shared';
 import { AppComponent } from './app.component';
 import { ShellComponent } from './shell';
 import { SidenavComponent } from './sidenav';
-import { HeaderComponent, HeaderService } from './header';
+import { HeaderComponent } from './header';
 
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
@@ -50,9 +50,6 @@ import { environment } from '../environments/environment';
     PublicationsComponent,
     RelationsComponent,
     TeamComponent
-  ],
-  providers: [
-    HeaderService
   ],
   imports: [
     // Angular
