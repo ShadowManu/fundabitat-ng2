@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRoute as ARoute, Router, NavigationEnd } from '@angular/router';
+import { ActivatedRoute as ARoute, Router, NavigationEnd, Event } from '@angular/router';
 
 import { combineLatest } from 'rxjs/observable/combineLatest';
 import { filter, map, pluck, startWith, tap } from 'rxjs/operators';
@@ -17,7 +17,7 @@ export class NavigationService {
     this.langSvc.language$,
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
-      startWith(undefined),
+      startWith(undefined as any),
       map(() => findLeafFromRouter(this.router)),
       filter(route => route.outlet === 'primary'),
       pluck<ARoute, NavigationToken>('snapshot', 'data', 'token')
