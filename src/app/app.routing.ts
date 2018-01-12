@@ -9,24 +9,24 @@ import { ContactComponent } from './contact';
 import { TeamComponent } from './team';
 import { RelationsComponent } from './relations';
 import { AreasComponent } from './areas';
-import { ProgramsComponent, ProgramsResolve } from './programs';
+import { ProgramsComponent } from './programs';
 import { PublicationsComponent } from './publications';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: '', component: HomeComponent, data: { token: 'HOME' } },
       {
         path: '',
         component: ShellComponent,
         children: [
-          { path: 'nosotros', component: AboutComponent },
-          { path: 'contacto', component: ContactComponent },
-          { path: 'nosotros/equipo', component: TeamComponent },
-          { path: 'nosotros/relaciones', component: RelationsComponent },
-          { path: 'areas', component: AreasComponent },
-          { path: 'programas', component: ProgramsComponent },
-          { path: 'publicaciones', component: PublicationsComponent },
+          { path: 'nosotros', component: AboutComponent, data: { token: 'ABOUTUS' } },
+          { path: 'contacto', component: ContactComponent, data: { token: 'CONTACT' } },
+          { path: 'nosotros/equipo', component: TeamComponent, data: { token: 'TEAM' } },
+          { path: 'nosotros/relaciones', component: RelationsComponent, data: { token: 'RELATIONS' } },
+          { path: 'areas', component: AreasComponent, data: { token: 'AREAS' } },
+          { path: 'programas', component: ProgramsComponent, data: { token: 'PROGRAMS' } },
+          { path: 'publicaciones', component: PublicationsComponent, data: { token: 'PUBLICATIONS' } },
 
           { path: 'auth', loadChildren: 'app/auth/auth.module#AuthModule' },
           { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule' }

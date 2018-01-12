@@ -8,18 +8,18 @@ interface HomeData {
   duties: string;
 }
 
-const HOME_DATA: LanguageData<HomeData> = new Map<Language, HomeData>([
-  ['es', {
+const HOME_DATA: LanguageData<HomeData> = {
+  es: {
     description: 'Asociación Civil, sin fines de lucro constituida para realizar investigaciones multi e interdisciplinarias, relativas al hábitat y su mejor apropiación',
     knowMore: 'Conoce más sobre nosotros',
     duties: 'crea y coordina'
-  }],
-  ['en',  {
+  },
+  en: {
     description: 'Is a civil, non-lucrative association, with permanent seat in Venezuela, constituted for the realisation of applied research of multidisciplinary character to habitat and its best appropiation',
     knowMore: 'Know more about us',
     duties: 'creates and coordinates'
-  }]
-]);
+  }
+};
 
 @Component({
   selector: 'fd-home',

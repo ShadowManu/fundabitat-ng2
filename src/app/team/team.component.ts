@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HeaderService } from '../header';
+import { Component } from '@angular/core';
 
 import { LanguageService, Language, LanguageData } from 'app/core';
 
@@ -15,8 +14,8 @@ interface TeamData {
   members: Member[];
 }
 
-const TEAM_DATA: LanguageData<TeamData> = new Map<Language, TeamData>([
-  ['es', {
+const TEAM_DATA: LanguageData<TeamData> = {
+  es: {
     team: 'Equipo',
     description: 'FUNDABITAT ha establecido sólidas alianzas, trabajando junto a importantes OGs, ONGs y la empresa privada del país y del exterior.',
     members: [
@@ -51,8 +50,8 @@ const TEAM_DATA: LanguageData<TeamData> = new Map<Language, TeamData>([
         photo: '/assets/images/team/victor-hernandez.png'
       }
     ]
-  }],
-  ['en',  {
+  },
+  en: {
     team: 'Our team',
     members: [
       {
@@ -86,24 +85,16 @@ const TEAM_DATA: LanguageData<TeamData> = new Map<Language, TeamData>([
         photo: '/assets/images/team/victor-hernandez.png'
       }
     ]
-  }]
-]);
+  }
+};
 
 @Component({
   selector: 'fd-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss']
 })
-export class TeamComponent implements OnInit {
-
-  constructor(
-    private headerSvc: HeaderService,
-    private langSvc: LanguageService
-  ) { }
-
-  ngOnInit() {
-    this.headerSvc.setTitle(this.data.team);
-  }
+export class TeamComponent {
+  constructor(private langSvc: LanguageService) { }
 
   get data(): TeamData { return this.langSvc.select(TEAM_DATA); }
 }
