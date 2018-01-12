@@ -15,9 +15,9 @@ import { AuthGuard } from 'app/core';
         component: AdminComponent,
         canActivate: [AuthGuard],
         children: [
-          { path: '',  component: AdminIndexComponent },
-          { path: 'programas', component: AdminProgramsComponent },
-          { path: 'programas/:id', component: AdminEditProgramComponent }
+          { path: '',  component: AdminIndexComponent, data: { token: 'ADMIN' } },
+          { path: 'programas', component: AdminProgramsComponent, data: { token: 'ADMIN' } },
+          { path: 'programas/:id', component: AdminEditProgramComponent, data: { token: 'ADMIN' } }
         ]
       }
     ])

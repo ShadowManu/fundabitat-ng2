@@ -11,7 +11,7 @@ import { LoginComponent } from './login';
         path: '',
         component: AuthComponent,
         children: [
-          { path: 'login', component: LoginComponent }
+          { path: 'login', component: LoginComponent, data: { token: 'ADMIN' } }
         ]
       },
     ]),

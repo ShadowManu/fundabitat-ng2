@@ -4,6 +4,7 @@ export * from './types';
 
 export * from './auth.service';
 export * from './language.service';
+export * from './navigation.service';
 export * from './programs.service';
 
 export * from './auth.guard';
