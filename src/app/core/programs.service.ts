@@ -4,11 +4,11 @@ import { AngularFirestore } from 'angularfire2/firestore';
 
 import { Observable } from 'rxjs/Observable';
 import { combineLatest } from 'rxjs/observable/combineLatest';
-import { switchMap } from 'rxjs/operators';
+import { map, switchMap, tap } from 'rxjs/operators';
 
-import { mixDocuments, normalizeDocArray } from './helpers';
+import { normalizeCollection, normalizeDoc, mixDocuments } from './helpers';
 import { LanguageService } from './language.service';
-import { Program, Section } from './types';
+import { FirestoreId, Program, Section } from './types';
 
 @Injectable()
 export class ProgramsService {
@@ -18,10 +18,17 @@ export class ProgramsService {
     private langSvc: LanguageService
   ) { }
 
+  fetchProgram(id: FirestoreId): Observable<Program> {
+    return this.langSvc.runWithLangSuffix(suffix =>
+      this.firestore.doc(`programs${suffix}/${id}`).snapshotChanges()
+      .pipe(map(normalizeDoc))
+    );
+  }
+
   fetchSections(): Observable<Section[]> {
     return this.langSvc.runWithLangSuffix(suffix =>
       this.firestore.collection(`program-sections${suffix}`)
-      .snapshotChanges().map(normalizeDocArray)
+      .snapshotChanges().map(normalizeCollection)
     );
   }
 
@@ -38,6 +45,11 @@ export class ProgramsService {
   createProgram(program: Program): Promise<any> {
     let suffix = this.langSvc.suffix;
     return this.firestore.collection(`programs${suffix}`).add(program);
+  }
+
+  editProgram(id: FirestoreId, program: Program) {
+    let suffix = this.langSvc.suffix;
+    return this.firestore.doc<Program>(`programs${suffix}/${id}`).update(program);
   }
 
   deleteProgram(id: string): Promise<any> {

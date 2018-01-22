@@ -1,5 +1,5 @@
-type FirestoreId = string;
-type StoragePath = string;
+export type FirestoreId = string;
+export type StoragePath = string;
 
 export interface Section {
   $id: FirestoreId;
