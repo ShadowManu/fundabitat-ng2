@@ -1,5 +1,6 @@
 import { Action, DocumentChangeAction as DCA } from 'angularfire2/firestore/interfaces';
 import { firestore } from 'firebase/app';
+import { Program, Section } from './types';
 
 type DS = firestore.DocumentSnapshot;
 
@@ -31,11 +32,7 @@ export const normalizeDoc = normalizeActionDS;
 
 // Custom normalizers
 
-export function mixDocuments(sections: DCA[], programs: DCA[]) {
-  let groupedPrograms = groupBy(programs.map(normalizeDCA), p => p.section);
-
-  return sections.map(s => {
-    let doc = normalizeDCA(s);
-    return { ...doc, programs: groupedPrograms[doc.$id] };
-  });
+export function joinProgramSections(sections: Section[], programs: Program[]) {
+  let groupedPrograms = groupBy(programs, p => p.section);
+  return sections.map(s => ({ ...s, programs: groupedPrograms[s.$id] }));
 }

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import { combineLatest } from 'rxjs/observable/combineLatest';
 import { map, switchMap, tap } from 'rxjs/operators';
 
-import { normalizeCollection, normalizeDoc, mixDocuments } from './helpers';
+import { normalizeCollection, normalizeDoc, joinProgramSections } from './helpers';
 import { LanguageService } from './language.service';
 import { FirestoreId, Program, Section } from './types';
 
@@ -35,9 +35,11 @@ export class ProgramsService {
   fetchAll(): Observable<Section[]> {
     return this.langSvc.runWithLangSuffix(suffix =>
       combineLatest(
-        this.firestore.collection(`program-sections${suffix}`).snapshotChanges(),
-        this.firestore.collection(`programs${suffix}`, ref => ref.orderBy('title', 'desc')).snapshotChanges(),
-        mixDocuments
+        this.firestore.collection(`program-sections${suffix}`, ref => ref.orderBy('title', 'desc'))
+          .snapshotChanges().pipe(map(normalizeCollection)),
+        this.firestore.collection(`programs${suffix}`, ref => ref.orderBy('title', 'desc'))
+          .snapshotChanges().pipe(map(normalizeCollection)),
+        joinProgramSections
       )
     );
   }
