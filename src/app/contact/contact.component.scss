@@ -1,3 +1,10 @@
+@import '~app/styles/variables';
+
+a {
+  color: $fd-accent;
+  text-decoration: underline;
+}
+
 ul {
   list-style: none;
 }
