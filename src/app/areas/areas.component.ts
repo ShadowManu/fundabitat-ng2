@@ -28,16 +28,16 @@ const AREAS_DATA: LanguageData<AreasData> = {
   },
   en: {
     title: 'Thematic Areas',
-    description: 'FUNDABITAT performs research work and counseling at the regional level, promoting the exchange of experiences of alternative development in:',
+    description: 'Developing the following thematic areas',
     areas: [
       { name: 'Etno-education', image: '/assets/images/areas/etnoeducacion.png' },
-      { name: 'Recovery of traditional construction techniques', image: '/assets/images/areas/recuperacion.png' },
-      { name: 'Generation and evaluation of Alternative and Appropriate Technologies', image: '/assets/images/areas/generacion.png' },
-      { name: 'Testing of materials', image: '/assets/images/areas/ensayo.png' },
+      { name: 'Recuperation of traditional constructive techniques', image: '/assets/images/areas/recuperacion.png' },
+      { name: 'Generation and evaluation of alternative and appropriate technologies of construction with earth', image: '/assets/images/areas/generacion.png' },
+      { name: 'Test of materials', image: '/assets/images/areas/ensayo.png' },
       { name: 'Basic environmental sanitation', image: '/assets/images/areas/saneamiento.png' },
-      { name: 'Integrated Mnagement of Heritages', image: '/assets/images/areas/manejo.png' },
-      { name: 'Rock Manifestations', image: '/assets/images/areas/manifestaciones.png' },
-      { name: 'Implementation of demonstration projects', image: '/assets/images/areas/implementacion.png' },
+      { name: 'Integrated Management of Heritages', image: '/assets/images/areas/manejo.png' },
+      { name: 'Rock Art Manifestations', image: '/assets/images/areas/manifestaciones.png' },
+      { name: 'Implementation of demonstrative projects', image: '/assets/images/areas/implementacion.png' },
       { name: 'Technical assistance to communities and organizations', image: '/assets/images/areas/asistencia.png' }
     ]
   }
