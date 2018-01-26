@@ -17,3 +17,10 @@ export interface Program {
 
   section: FirestoreId;
 }
+
+export interface Publication {
+  $id: FirestoreId;
+  title: string;
+  description: string;
+  image: StoragePath;
+}

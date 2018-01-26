@@ -5,6 +5,7 @@ import { AuthService } from './auth.service';
 import { LanguageService } from './language.service';
 import { NavigationService } from './navigation.service';
 import { ProgramsService } from './programs.service';
+import { PublicationsService } from './publications.service';
 
 import { AuthGuard } from './auth.guard';
 
@@ -17,6 +18,7 @@ import { AuthGuard } from './auth.guard';
     LanguageService,
     NavigationService,
     ProgramsService,
+    PublicationsService,
 
     AuthGuard
   ]
