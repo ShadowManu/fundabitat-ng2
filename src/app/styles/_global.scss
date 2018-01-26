@@ -13,7 +13,7 @@ body {
   @include core-font();
 }
 
-p, h1, h2, h3, span, mat-card-title, mat-card-subtitle { @include core-font(); }
+p, h1, h2, h3, li, span, mat-card-title, mat-card-subtitle { @include core-font(); }
 
 p { margin: 0; }
 

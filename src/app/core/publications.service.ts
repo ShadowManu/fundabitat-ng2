@@ -17,7 +17,7 @@ export class PublicationsService {
 
   fetchPublications(): Observable<Publication[]> {
     return this.langSvc.runWithLangSuffix(suffix =>
-      this.firestore.collection(`publications${suffix}`)
+      this.firestore.collection(`publications${suffix}`, ref => ref.orderBy('order', 'asc'))
         .snapshotChanges().pipe(map(normalizeCollection))
     );
   }
